@@ -1,4 +1,3 @@
-import '../styles/globals.css'
 import '../styles/tailwind.css'
 import { ReactElement } from 'react'
 import { AppProps } from 'next/app'
