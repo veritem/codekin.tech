@@ -1,6 +1,6 @@
 module.exports = {
     purge: ['./pages/**/*.js', './components/**/*.js'],
-    darkMode: false, // or 'media' or 'class'
+    darkMode: 'class', // or 'media' or 'class'
     theme: {
         fontFamily: {
             display: ['Montserrat', 'sans-serif'],
@@ -10,7 +10,7 @@ module.exports = {
         extend: {
             backgroundColor: (theme) => ({
                 ...theme('colors'),
-                'primary-dark': '#0A1225',
+                'primary-dark': '#050505',
                 'primary-blue': '#143CCB'
             })
         }
