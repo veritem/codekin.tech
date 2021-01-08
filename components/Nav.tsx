@@ -9,9 +9,9 @@ export default function Nav(): React.ReactElement {
     useEffect(() => setMounted(true), [])
 
     return (
-        <nav className="flex justify-between items-center">
+        <nav className="flex justify-between items-center bg-white dark:bg-primary-dark">
             <div>
-                <h2>CodeKin.tech</h2>
+                <h2 className=" dark:text-white">CodeKin.tech</h2>
             </div>
             <div className=" flex justify-between items-center">
                 {mounted && (
