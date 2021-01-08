@@ -18,7 +18,7 @@ export default function Nav(): React.ReactElement {
                     </a>
                 </Link>
             </div>
-            <div className=" flex justify-between gap-4 items-center">
+            <div className=" flex justify-between gap-10 items-center">
                 <Link href="/">
                     <a className=" font-display dark:text-white text-primary">Home</a>
                 </Link>
