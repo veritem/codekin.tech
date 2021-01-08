@@ -4,7 +4,7 @@ export default function Nav(): React.ReactElement {
             <div>
                 <h2>CodeKin.tech</h2>
             </div>
-            <div>
+            <div className=" flex justify-between items-center">
                 <p>theme</p>
                 <p>About us</p>
             </div>
