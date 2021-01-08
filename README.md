@@ -1,2 +1,2 @@
-# codekin.tech
-> Programming blog
+# Programming blog
+> [Programming Blog](https://codekin.tech)
