@@ -1,2 +1,2 @@
 # codekin.tech
-> my programming book
+> Programming blog
