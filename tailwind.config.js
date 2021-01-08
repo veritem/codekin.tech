@@ -17,7 +17,11 @@ module.exports = {
                 'primary-dark': '#050505',
                 'primary-blue': '#143CCB'
             })
-        }
+        },
+        textColor: (theme) => ({
+            ...theme('colors'),
+            primary: '#41434a'
+        })
     },
     variants: {
         extend: {}

@@ -19,8 +19,12 @@ export default function Nav(): React.ReactElement {
                 </Link>
             </div>
             <div className=" flex justify-between gap-4 items-center">
+                <Link href="/">
+                    <a className=" font-display dark:text-white text-primary">Home</a>
+                </Link>
+
                 <Link href="/about">
-                    <a className=" font-display dark:text-white">About</a>
+                    <a className=" font-display dark:text-white text-primary">About</a>
                 </Link>
 
                 {mounted && (
