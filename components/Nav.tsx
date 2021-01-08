@@ -1,5 +1,6 @@
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 export default function Nav(): React.ReactElement {
     const [mounted, setMounted] = useState<boolean>(false)
@@ -9,9 +10,11 @@ export default function Nav(): React.ReactElement {
     useEffect(() => setMounted(true), [])
 
     return (
-        <nav className="flex justify-between items-center bg-white dark:bg-primary-dark">
+        <nav className=" sticky z-10 top-0 flex dark:bg-primary-dark bg-opacity-60  justify-between items-center">
             <div>
-                <h2 className=" dark:text-white">CodeKin.tech</h2>
+                <Link href="/">
+                    <a className=" dark:text-white">codeKin.tech</a>
+                </Link>
             </div>
             <div className=" flex justify-between items-center">
                 {mounted && (
