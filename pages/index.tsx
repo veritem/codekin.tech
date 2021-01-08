@@ -10,8 +10,10 @@ export default function Home(): React.ReactElement {
             </Head>
             <Container>
                 <div className="mb-8">
-                    <h2 className=" text-4xl dark:text-white pb-1">Welcome to codeKin</h2>
-                    <p className=" text-xl text-primary dark:text-white">
+                    <h2 className=" text-4xl dark:text-white pb-1 font-display">
+                        Welcome to codeKin
+                    </h2>
+                    <p className=" text-xl text-primary dark:text-white font-body">
                         The programming blog for Software enthusiasts
                     </p>
                 </div>
