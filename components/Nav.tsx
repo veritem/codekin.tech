@@ -18,9 +18,13 @@ export default function Nav(): React.ReactElement {
                     </a>
                 </Link>
             </div>
-            <div className=" flex justify-between gap-4 items-center">
+            <div className=" flex justify-between gap-10 items-center">
+                <Link href="/">
+                    <a className=" font-display dark:text-white text-primary">Home</a>
+                </Link>
+
                 <Link href="/about">
-                    <a className=" font-display dark:text-white">About</a>
+                    <a className=" font-display dark:text-white text-primary">About</a>
                 </Link>
 
                 {mounted && (
@@ -33,7 +37,6 @@ export default function Nav(): React.ReactElement {
                             width="24"
                             height="24"
                             fill="currentColor"
-                            // stroke="currentColor"
                             className="text-gray-800 dark:text-gray-200">
                             {theme === 'dark' ? (
                                 <>
@@ -42,8 +45,12 @@ export default function Nav(): React.ReactElement {
                                 </>
                             ) : (
                                 <>
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z" />
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                                    />
                                 </>
                             )}
                         </svg>
