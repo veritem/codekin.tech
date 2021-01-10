@@ -8,20 +8,18 @@ export default function about(): React.ReactElement {
                 <title>About - codeKin</title>
             </Head>
             <Container>
-                <h1 className=" text-xl mt-5 mb-5 text-center font-bold font-display dark:text-white">
+                <h1 className=" text-4xl mt-12 mb-12 text-center font-bold font-display dark:text-white">
                     About codeKin.tech
                 </h1>
                 <p className=" font-body mb-10 dark:text-white">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quod,
-                    officiis laboriosam natus tenetur dolores, maxime consectetur, totam in maiores
-                    reprehenderit dolore odio qui neque assumenda debitis suscipit. Consequatur,
-                    nam.
+                    Codekin.tech is a website that was born due to love of coding and open source
+                    software, this website serves as a side book for my notes while exploring what i
+                    Love the most which is programing, i think you will get a ton of value into this
+                    site
                 </p>
-
                 <p className="dark:text-white">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, molestiae
-                    commodi quas ut earum quasi rem similique dolores, fugit eos repellat adipisci
-                    corrupti ad sed totam minus reiciendis impedit deserunt.
+                    My Goals is simple, Explaining programming topics in way that make sense to any
+                    one.
                 </p>
             </Container>
         </>
