@@ -3,6 +3,7 @@ import React from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
 import { getAllPosts } from '../lib/posts'
+import Link from 'next/link'
 
 export default function Home({ posts }): React.ReactElement {
     console.log(posts)
@@ -22,6 +23,17 @@ export default function Home({ posts }): React.ReactElement {
                 </div>
                 <div>
                     <h2 className="text-3xl dark:text-white">Recent posts</h2>
+                    <div>
+                        {posts.map((post) => (
+                            <div key={post.slug}>
+                                <h2>{post.title}</h2>
+                                <p>{post.summary}</p>
+                                <Link href={`/${post.slug}`}>
+                                    <a>Read more</a>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </Container>
         </>
