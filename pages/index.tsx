@@ -1,8 +1,10 @@
 import React from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
+import { getAllPosts } from '../lib/posts'
 
-export default function Home(): React.ReactElement {
+export default function Home({ posts }): React.ReactElement {
+    console.log(posts)
     return (
         <>
             <Head>
@@ -23,4 +25,17 @@ export default function Home(): React.ReactElement {
             </Container>
         </>
     )
+}
+
+Home.defaultProps = {
+    posts: []
+}
+
+export async function getStaticProps() {
+    const posts = getAllPosts()
+    return {
+        props: {
+            posts
+        }
+    }
 }
