@@ -6,7 +6,6 @@ import { getAllPosts } from '../lib/posts'
 import Link from 'next/link'
 
 export default function Home({ posts }): React.ReactElement {
-    console.log(posts)
     return (
         <>
             <Head>
