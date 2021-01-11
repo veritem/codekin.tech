@@ -1,18 +1,16 @@
 import React from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { getAllSlugs, getPostBySlug } from '@/lib/posts'
+import BlogLayout from '@/layouts/BlogLayout'
+import { PostHeading } from 'types/PostHeading'
 
-// interface SlugProps {
-//     source: Post
-// }
+interface SlugProps {
+    source: string
+    frontMatter: PostHeading
+}
 
-export const Slug: React.FC = (props): React.ReactElement => {
-    console.log(props)
-    return (
-        <div>
-            <h1>Hello World</h1>
-        </div>
-    )
+export const Slug: React.FC<SlugProps> = ({ frontMatter, source }): React.ReactElement => {
+    return <BlogLayout frontMatter={frontMatter}>{source}</BlogLayout>
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
