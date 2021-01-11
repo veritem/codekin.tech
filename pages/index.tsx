@@ -21,17 +21,21 @@ export default function Home({ posts }): React.ReactElement {
                     </p>
                 </div> */}
                 <div>
-                    <h2 className="text-3xl leading-9 font-extrabold text-gray-900 tracking-tight dark:text-white mb-5">
+                    <h2 className="text-3xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-8">
                         Recent posts
                     </h2>
 
-                    <div className="py-4">
+                    <div>
                         {posts.map((post, index) => (
-                            <div key={`${post.slug}-${index}`}>
-                                <h2>{post.title}</h2>
-                                <p>{post.summary}</p>
+                            <div key={`${post.slug}-${index}`} className=" py-4">
+                                <h2 className=" font-display  text-xl dark:text-white">
+                                    {post.title}
+                                </h2>
+                                <p className="mt-6 mb-4 font-helper dark:text-white">
+                                    {post.summary}
+                                </p>
                                 <Link href={`/${post.slug}`}>
-                                    <a>Read more</a>
+                                    <a className="dark:text-white font-body">Read more</a>
                                 </Link>
                             </div>
                         ))}
