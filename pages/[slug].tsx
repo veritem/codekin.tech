@@ -3,6 +3,8 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { getAllSlugs, getPostBySlug } from '@/lib/posts'
 import BlogLayout from '@/layouts/BlogLayout'
 import { PostHeading } from 'types/PostHeading'
+import hydrate from 'next-mdx-remote/hydrate'
+import MdxComponent from '@/components/MdxComponent'
 
 interface SlugProps {
     source: string
@@ -10,7 +12,10 @@ interface SlugProps {
 }
 
 export const Slug: React.FC<SlugProps> = ({ frontMatter, source }): React.ReactElement => {
-    return <BlogLayout frontMatter={frontMatter}>{source}</BlogLayout>
+    const content = hydrate(source, {
+        components: MdxComponent
+    })
+    return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -26,7 +31,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const { mdxSource, frontMatter } = await getPostBySlug(params.slug)
 
     return {
-        props: { source: mdxSource.renderedOutput, frontMatter },
+        props: { source: mdxSource, frontMatter },
         revalidate: 30
     }
 }

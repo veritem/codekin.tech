@@ -1,6 +1,14 @@
+import { PostHeading } from 'types/PostHeading'
 import IndexLayout from './index'
 
-export default function BlogLayout({ children, frontMatter }): React.ReactElement {
+interface BlogLayoutProps {
+    frontMatter: PostHeading
+}
+
+export const BlogLayout: React.FC<BlogLayoutProps> = ({
+    frontMatter,
+    children
+}): React.ReactElement => {
     return (
         <IndexLayout>
             <article className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full">
@@ -12,3 +20,4 @@ export default function BlogLayout({ children, frontMatter }): React.ReactElemen
         </IndexLayout>
     )
 }
+export default BlogLayout
