@@ -1,26 +1,23 @@
 import React from 'react'
-import { Post } from 'types/Post'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { getAllSlugs, getPostBySlug } from '@/lib/posts'
 
-interface SlugProps {
-    post: Post
-}
+// interface SlugProps {
+//     source: Post
+// }
 
-export const Slug: React.FC<SlugProps> = ({ post }): React.ReactElement => {
-    console.log(post)
+export const Slug: React.FC = (props): React.ReactElement => {
+    console.log(props)
     return (
         <div>
             <h1>Hello World</h1>
         </div>
     )
 }
-export default Slug
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const slugs = getAllSlugs()
 
-    console.log(slugs)
     return {
         paths: slugs.map((s) => ({ params: { slug: s.slug } })),
         fallback: false
@@ -28,8 +25,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const data = getPostBySlug(params.slug)
+    const { mdxSource, frontMatter } = await getPostBySlug(params.slug)
+
     return {
-        props: { post: data }
+        props: { source: mdxSource.renderedOutput, frontMatter },
+        revalidate: 30
     }
 }
+
+export default Slug
