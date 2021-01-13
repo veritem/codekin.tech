@@ -43,12 +43,14 @@ export default function Home({ posts }): React.ReactElement {
                         ))}
                     </div>
 
-                    <div className=" text-9xl font-black text-white text-center">
-                        <span className=" bg-gradient-to-r text-transparent bg-clip-text from-purple-400 to-pink-500">
+                    <div className=" sm:text-6xl font-black text-white text-center md:text-9xl">
+                        <span className="bg-gradient-to-r text-transparent bg-clip-text from-purple-400 to-pink-500">
                             Welcome to my Blog
                         </span>
                     </div>
-                    <p>New content comming out every Week</p>
+                    <p className=" text-center text-3xl dark:text-white font-body mt-10">
+                        New content comming out every Week
+                    </p>
                 </div>
             </Container>
         </>
