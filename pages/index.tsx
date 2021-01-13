@@ -2,7 +2,7 @@
 import React from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
-import { getAllPosts } from '@/lib/posts'
+// import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 
 export default function Home({ posts }): React.ReactElement {
@@ -21,9 +21,11 @@ export default function Home({ posts }): React.ReactElement {
                     </p>
                 </div> */}
                 <div>
-                    <h2 className="text-3xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-8">
-                        Recent posts
-                    </h2>
+                    {posts.length > 1 && (
+                        <h2 className="text-3xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-8">
+                            Recent posts
+                        </h2>
+                    )}
 
                     <div>
                         {posts.map((post, index) => (
@@ -40,6 +42,13 @@ export default function Home({ posts }): React.ReactElement {
                             </div>
                         ))}
                     </div>
+
+                    <div className=" text-9xl font-black text-white text-center">
+                        <span className=" bg-gradient-to-r text-transparent bg-clip-text from-purple-400 to-pink-500">
+                            Welcome to my Blog
+                        </span>
+                    </div>
+                    <p>New content comming out every Week</p>
                 </div>
             </Container>
         </>
@@ -51,10 +60,10 @@ Home.defaultProps = {
 }
 
 export async function getStaticProps() {
-    const posts = getAllPosts()
+    // const posts = getAllPosts()
     return {
         props: {
-            posts
+            // posts
         }
     }
 }
