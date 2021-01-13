@@ -17,7 +17,8 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
                 <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
                     {frontMatter.title}
                 </h1>
-                <div className="prose dark:prose-dark max-w-none w-full">{children}</div>
+                <div className="prose prose-indigo max-w-none w-full mb-8">{children}</div>
+                {/* dark:prose-dark */}
             </article>
         </IndexLayout>
     )
