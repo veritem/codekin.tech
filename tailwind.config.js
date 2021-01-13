@@ -7,7 +7,7 @@ module.exports = {
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         fontFamily: {
-            display: ['Montserrat', 'sans-serif'],
+            display: ['Inter', 'sans-serif'],
             helper: ['Lora', 'serif'],
             body: ['Hind Madurai', 'sans-serif']
         },
@@ -26,5 +26,5 @@ module.exports = {
     variants: {
         extend: {}
     },
-    plugins: []
+    plugins: [require('@tailwindcss/typography')]
 }

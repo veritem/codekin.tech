@@ -19,13 +19,13 @@ export default function Nav(): React.ReactElement {
                 </Link>
             </div>
             <div className=" flex justify-between gap-10 items-center">
-                <Link href="/">
+                {/* <Link href="/">
                     <a className=" font-display dark:text-white text-primary">Home</a>
-                </Link>
+                </Link> */}
 
-                <Link href="/about">
+                {/* <Link href="/about">
                     <a className=" font-display dark:text-white text-primary">About</a>
-                </Link>
+                </Link> */}
 
                 {mounted && (
                     <button
