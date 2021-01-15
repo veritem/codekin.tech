@@ -5,8 +5,10 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html lang="en">
-                <Head />
-                <body className="bg-white dark:bg-primary-dark h-screen">
+                <Head>
+                    <meta content="#ffffff" name="theme-color" />{' '}
+                </Head>
+                <body className="bg-white dark:bg-black text-white dark:text-black">
                     <Main />
                     <NextScript />
                 </body>
