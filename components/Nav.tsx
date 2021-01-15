@@ -29,6 +29,7 @@ export default function Nav(): React.ReactElement {
 
                 {mounted && (
                     <button
+                        aria-label="Left Align"
                         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                         className="bg-gray-200 dark:bg-gray-800 rounded px-2 py-1 h-10 w-10 focus:outline-none">
                         <svg

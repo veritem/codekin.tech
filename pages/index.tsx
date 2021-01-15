@@ -36,9 +36,13 @@ export default function Home({ posts }): React.ReactElement {
                                 <p className="mt-6 mb-4 font-helper dark:text-white">
                                     {post.summary}
                                 </p>
-                                <Link href={`/${post.slug}`}>
-                                    <a className="dark:text-white font-body">Read more</a>
-                                </Link>
+                                <p>
+                                    <Link href={`/${post.slug}`}>
+                                        <a className="dark:text-white font-body">
+                                            Read the ful article
+                                        </a>
+                                    </Link>
+                                </p>
                             </div>
                         ))}
                     </div>

@@ -1,4 +1,6 @@
 export default {
+    title: 'Makuza Mugabo Verite',
+    description: 'Programming tips and tricks',
     canonical: 'https://codekin.tech',
     openGraph: {
         type: 'website',
