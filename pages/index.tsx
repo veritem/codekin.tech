@@ -50,12 +50,22 @@ export default function Home({ posts }): React.ReactElement {
                     {posts.length == 0 && (
                         <div>
                             <div className="font-black text-white text-center md:text-9xl sm:text-6xl">
-                                <span className="bg-gradient-to-r text-transparent bg-clip-text from-purple-400 to-pink-500">
+                                <span className="bg-gradient-to-r text-transparent font-display bg-clip-text from-purple-400 to-pink-500">
                                     Welcome to my Blog
                                 </span>
                             </div>
-                            <p className=" text-center md:text-3xl sm:text-xl dark:text-white font-body mt-10">
+                            <p className=" text-center md:text-2xl sm:text-xl dark:text-white font-helper mt-10">
                                 New content comming out every Week
+                            </p>
+                            <p className="text-center md:text-base sm:text-sm dark:text-white font-helper mt-36">
+                                Made with{' '}
+                                <span role="img" aria-labelledby="love">
+                                    ❤️
+                                </span>{' '}
+                                by{'  '}
+                                <Link href="https://twitter.com/makuza_mugabo_v">
+                                    <a className=" text-blue-500">Makuza Mugabo Verite</a>
+                                </Link>
                             </p>
                         </div>
                     )}
