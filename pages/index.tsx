@@ -2,7 +2,7 @@
 import React from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
-// import { getAllPosts } from '@/lib/posts'
+import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 
 export default function Home({ posts }): React.ReactElement {
@@ -43,14 +43,18 @@ export default function Home({ posts }): React.ReactElement {
                         ))}
                     </div>
 
-                    <div className=" sm:text-6xl font-black text-white text-center md:text-9xl">
-                        <span className="bg-gradient-to-r text-transparent bg-clip-text from-purple-400 to-pink-500">
-                            Welcome to my Blog
-                        </span>
-                    </div>
-                    <p className=" text-center text-3xl dark:text-white font-body mt-10">
-                        New content comming out every Week
-                    </p>
+                    {posts.length == 0 && (
+                        <div>
+                            <div className="font-black text-white text-center text-9xl">
+                                <span className="bg-gradient-to-r text-transparent bg-clip-text from-purple-400 to-pink-500">
+                                    Welcome to my Blog
+                                </span>
+                            </div>
+                            <p className=" text-center text-3xl dark:text-white font-body mt-10">
+                                New content comming out every Week
+                            </p>
+                        </div>
+                    )}
                 </div>
             </Container>
         </>
@@ -62,10 +66,10 @@ Home.defaultProps = {
 }
 
 export async function getStaticProps() {
-    // const posts = getAllPosts()
+    const posts = getAllPosts()
     return {
         props: {
-            // posts
+            posts
         }
     }
 }
