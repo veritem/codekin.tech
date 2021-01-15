@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
                 <Head>
                     <meta content="#ffffff" name="theme-color" />{' '}
                 </Head>
-                <body className="bg-white dark:bg-black text-white dark:text-black">
+                <body className=" dark:bg-black dark:text-black">
                     <Main />
                     <NextScript />
                 </body>
