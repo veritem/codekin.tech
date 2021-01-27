@@ -2,7 +2,7 @@
 import React from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
-// import { getAllPosts } from '@/lib/posts'
+import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 
 export default function Home({ posts }): React.ReactElement {
@@ -71,11 +71,11 @@ Home.defaultProps = {
     posts: []
 }
 
-// export async function getStaticProps() {
-//     // const posts = getAllPosts()
-//     return {
-//         props: {
-//             // posts
-//         }
-//     }
-// }
+export async function getStaticProps() {
+    const posts = getAllPosts()
+    return {
+        props: {
+            posts
+        }
+    }
+}
