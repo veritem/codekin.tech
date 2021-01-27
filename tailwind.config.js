@@ -1,4 +1,4 @@
-import { spacing, fontFamily } from 'tailwindcss/defaultTheme'
+const { spacing, fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
     purge: [
