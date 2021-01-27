@@ -12,14 +12,6 @@ export default function Home({ posts }): React.ReactElement {
                 <title>codeKin</title>
             </Head>
             <Container>
-                {/* <div className="mb-8">
-                    <h2 className=" text-4xl dark:text-white pb-1 font-display">
-                        Welcome to codeKin
-                    </h2>
-                    <p className=" text-xl text-primary dark:text-white font-body">
-                        The programming blog for Software enthusiasts
-                    </p>
-                </div> */}
                 <div>
                     {posts.length > 1 && (
                         <h2 className="text-3xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-8">
@@ -55,7 +47,7 @@ export default function Home({ posts }): React.ReactElement {
                                 </span>
                             </div>
                             <p className=" text-center md:text-2xl sm:text-xl dark:text-white font-helper mt-10">
-                                New content comming out every Week
+                                Comming soon
                             </p>
                             <p className="text-center md:text-base sm:text-sm dark:text-white font-helper mt-36">
                                 Made with{' '}
