@@ -31,7 +31,7 @@ export default function Home({ posts }): React.ReactElement {
                                 <p>
                                     <Link href={`/${post.slug}`}>
                                         <a className="dark:text-white font-body">
-                                            Read the ful article
+                                            Read the full article
                                         </a>
                                     </Link>
                                 </p>
