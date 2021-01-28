@@ -1,5 +1,5 @@
 import Nav from '@/components/Nav'
-import Footer from '@/components/Footer'
+// import Footer from '@/components/Footer'
 
 const IndexLayout: React.FC = ({ children }): React.ReactElement => {
     return (
@@ -9,7 +9,7 @@ const IndexLayout: React.FC = ({ children }): React.ReactElement => {
                 <main className=" flex justify-center content-start mt-20 flex-col">
                     {children}
                 </main>
-                <Footer />
+                {/* <Footer /> */}
             </div>
         </section>
     )

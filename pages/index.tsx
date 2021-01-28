@@ -22,7 +22,7 @@ export default function Home({ posts }): React.ReactElement {
                     <div>
                         {posts.map((post, index) => (
                             <div key={`${post.slug}-${index}`} className=" py-4">
-                                <h2 className=" font-display  text-xl dark:text-white">
+                                <h2 className=" font-display text-blue-600  text-xl dark:text-blue-500">
                                     {post.title}
                                 </h2>
                                 <p className="mt-6 mb-4 font-helper dark:text-white">
