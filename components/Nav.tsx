@@ -10,7 +10,7 @@ export default function Nav(): React.ReactElement {
     useEffect(() => setMounted(true), [])
 
     return (
-        <nav className=" fixed w-full flex  bg-opacity-80    justify-around items-center pt-2 pb-2">
+        <nav className="sticky-nav w-full flex  bg-opacity-80    justify-around items-center pt-2 pb-2">
             <div>
                 <Link href="/">
                     <a className=" dark:text-white font-display capitalize font-bold text-xl">
