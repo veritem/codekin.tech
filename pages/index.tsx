@@ -5,6 +5,9 @@ import Head from 'next/head'
 import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 
+//TODO: Fix the Navbar
+//TODO: Fix the title for new blog and proper fomattting of dates
+
 export default function Home({ posts }): React.ReactElement {
     return (
         <>
