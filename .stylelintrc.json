@@ -1,0 +1,31 @@
+{
+    "extends": "stylelint-config-recommended",
+    "ignoreFiles": [
+        "posts/**/*.mdx"
+    ],
+    "rules": {
+        "at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": [
+                    "extends",
+                    "tailwind",
+                    "variants",
+                    "responsive",
+                    "screen"
+                ]
+            }
+        ],
+        "block-no-empty": null,
+        "unit-whitelist": [
+            "em",
+            "rem",
+            "s",
+            "px",
+            "%",
+            "vh"
+        ],
+        "declaration-block-trailing-semicolon": null,
+        "no-descending-specificity": null
+    }
+}

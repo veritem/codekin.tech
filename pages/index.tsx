@@ -2,8 +2,11 @@
 import React from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
-// import { getAllPosts } from '@/lib/posts'
+import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
+
+//TODO: Fix the Navbar
+//TODO: Fix the title for new blog and proper fomattting of dates
 
 export default function Home({ posts }): React.ReactElement {
     return (
@@ -14,7 +17,7 @@ export default function Home({ posts }): React.ReactElement {
             <Container>
                 <div>
                     {posts.length > 1 && (
-                        <h2 className="text-3xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-8">
+                        <h2 className="text-xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-8">
                             Recent posts
                         </h2>
                     )}
@@ -22,18 +25,13 @@ export default function Home({ posts }): React.ReactElement {
                     <div>
                         {posts.map((post, index) => (
                             <div key={`${post.slug}-${index}`} className=" py-4">
-                                <h2 className=" font-display  text-xl dark:text-white">
-                                    {post.title}
-                                </h2>
+                                <Link href={`/${post.slug}`}>
+                                    <a className=" font-display text-blue-600  text-xl dark:text-blue-500">
+                                        {post.title}
+                                    </a>
+                                </Link>
                                 <p className="mt-6 mb-4 font-helper dark:text-white">
                                     {post.summary}
-                                </p>
-                                <p>
-                                    <Link href={`/${post.slug}`}>
-                                        <a className="dark:text-white font-body">
-                                            Read the ful article
-                                        </a>
-                                    </Link>
                                 </p>
                             </div>
                         ))}
@@ -71,11 +69,11 @@ Home.defaultProps = {
     posts: []
 }
 
-// export async function getStaticProps() {
-//     // const posts = getAllPosts()
-//     return {
-//         props: {
-//             // posts
-//         }
-//     }
-// }
+export async function getStaticProps() {
+    const posts = getAllPosts()
+    return {
+        props: {
+            posts
+        }
+    }
+}

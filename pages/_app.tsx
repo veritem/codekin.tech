@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
     // }, [router.events])
 
     return (
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="dark">
             <MDXProvider components={MDXComponents}>
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
