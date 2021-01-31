@@ -22,18 +22,13 @@ export default function Home({ posts }): React.ReactElement {
                     <div>
                         {posts.map((post, index) => (
                             <div key={`${post.slug}-${index}`} className=" py-4">
-                                <h2 className=" font-display text-blue-600  text-xl dark:text-blue-500">
-                                    {post.title}
-                                </h2>
+                                <Link href={`/${post.slug}`}>
+                                    <a className=" font-display text-blue-600  text-xl dark:text-blue-500">
+                                        {post.title}
+                                    </a>
+                                </Link>
                                 <p className="mt-6 mb-4 font-helper dark:text-white">
                                     {post.summary}
-                                </p>
-                                <p>
-                                    <Link href={`/${post.slug}`}>
-                                        <a className="dark:text-white font-body">
-                                            Read the full article
-                                        </a>
-                                    </Link>
                                 </p>
                             </div>
                         ))}

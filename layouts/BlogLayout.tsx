@@ -11,7 +11,6 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
     frontMatter,
     children
 }): React.ReactElement => {
-    console.log(frontMatter)
     return (
         <IndexLayout>
             <BlogSeo url={`https://codekin.tech/${frontMatter.slug}`} {...frontMatter} />

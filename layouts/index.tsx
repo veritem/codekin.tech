@@ -6,7 +6,7 @@ const IndexLayout: React.FC = ({ children }): React.ReactElement => {
         <section className="max-h-screen max-w-full">
             <Nav />
             <div className=" w-2/3 m-auto">
-                <main className=" flex justify-center content-start mt-20 flex-col">
+                <main className=" flex justify-center content-start mt-20 mb-8 flex-col">
                     {children}
                 </main>
                 <Footer />
