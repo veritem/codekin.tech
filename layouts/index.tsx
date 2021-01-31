@@ -1,5 +1,4 @@
 import Nav from '@/components/Nav'
-// import Footer from '@/components/Footer'
 
 const IndexLayout: React.FC = ({ children }): React.ReactElement => {
     return (
