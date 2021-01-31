@@ -19,7 +19,9 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
                     {frontMatter.title}
                 </h1>
 
-                {/* <p className=" text-gray-400 pb-4 text-sm">updated {}</p> */}
+                <p className=" text-gray-400 pb-4 text-sm">
+                    Last updated {frontMatter.publishedOn}
+                </p>
 
                 <div className="w-full h-1/4">
                     <Image src={frontMatter.image} width={900} height={500} />
