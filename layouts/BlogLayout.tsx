@@ -15,11 +15,11 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
         <IndexLayout>
             <BlogSeo url={`https://codekin.tech/${frontMatter.slug}`} {...frontMatter} />
             <article className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-32 w-full">
-                <h1 className="font-bold text-2xl    tracking-tight mt-4 mb-5 text-black dark:text-white">
+                <h1 className="font-bold text-2xl  tracking-tight mt-0 mb-5 text-black dark:text-white">
                     {frontMatter.title}
                 </h1>
 
-                <p className=" text-gray-400 pb-4 text-sm">last updated May 2019</p>
+                {/* <p className=" text-gray-400 pb-4 text-sm">updated {}</p> */}
 
                 <div className="w-full h-1/4">
                     <Image src={frontMatter.image} width={900} height={500} />

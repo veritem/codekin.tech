@@ -6,12 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&display=swap');
 
-/*
-* TODO:
-  - play around with these colors and make my own code snippet colors similar to github
-  - Fix the homepage for blog listings
-*/
-
 ::selection {
     background-color: #47a3f3;
     color: #fefefe;
@@ -32,7 +26,7 @@ html {
     position: sticky;
     z-index: 10;
     top: 0;
-    backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(100px);
     transition: background-color 0.1 ease-in-out;
 }
 
