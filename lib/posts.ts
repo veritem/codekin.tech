@@ -23,7 +23,14 @@ export const getAllPosts = () => {
 }
 
 export const getPostBySlug = async (slug) => {
-    const source = fs.readFileSync(path.join(root, 'posts', `${slug}.mdx`), 'utf8')
+    let source
+
+    try {
+        source = fs.readFileSync(path.join(root, 'posts', `${slug}.mdx`), 'utf8')
+    } catch (error) {
+        return {}
+    }
+
     const { data, content } = matter(source)
 
     const mdxSource = await renderToString(content, {

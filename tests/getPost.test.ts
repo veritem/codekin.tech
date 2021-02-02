@@ -7,4 +7,9 @@ describe('Check if top-10-wiki-apps is returned', () => {
         const post = await getPostBySlug(slug)
         expect(post.frontMatter.slug === slug).toBeTruthy()
     })
+
+    test('should fail if slug is not found', async () => {
+        const post = await getPostBySlug('nothing')
+        expect(post.frontMatter === null)
+    })
 })
