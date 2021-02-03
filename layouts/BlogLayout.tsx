@@ -22,7 +22,8 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
                 </h1>
 
                 <p className=" text-gray-400 pb-4 text-sm">
-                    updated {formatDate(frontMatter.publishedOn)} • {frontMatter.readTime.text}
+                    updated {formatDate((frontMatter.publishedOn as unknown) as Date)} •{' '}
+                    {frontMatter.readTime.text}
                 </p>
 
                 <div className="w-full h-1/4">
