@@ -15,9 +15,9 @@ export default function Home({ posts }): React.ReactElement {
                 <title>codeKin</title>
             </Head>
             <Container>
-                <div>
+                <div className="mt-12">
                     {posts.length > 1 && (
-                        <h2 className="text-xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-8">
+                        <h2 className="text-xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-4">
                             Recent posts
                         </h2>
                     )}
