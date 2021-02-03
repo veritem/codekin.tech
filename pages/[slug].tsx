@@ -12,7 +12,7 @@ interface SlugProps {
 }
 
 export const Slug: React.FC<SlugProps> = ({ frontMatter, source }): React.ReactElement => {
-    const content = hydrate(source, {
+    const content = hydrate(source as any, {
         components: MdxComponent
     })
     return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>

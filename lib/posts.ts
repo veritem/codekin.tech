@@ -51,6 +51,7 @@ export const getPostBySlug = async (slug) => {
             wordCount: content.split(/\s+/gu).length,
             readTime: readingTime(content),
             slug: slug || null,
+            ...getNextAndPrevious(slug),
             ...data
         }
     }
@@ -68,4 +69,11 @@ export const getAllSlugs = () => {
     })
 
     return slugs
+}
+
+function getNextAndPrevious(slug) {
+    const index = getAllSlugs().indexOf((el) => el.slug === slug)
+    const prev = getAllSlugs()[index - 1]?.slug || ''
+    const next = getAllSlugs()[index + 1]?.slug || ''
+    return { prev, next }
 }
