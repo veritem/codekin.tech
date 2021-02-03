@@ -3,7 +3,7 @@ export interface PostHeading {
     summary: string
     slug: string
     url: string
-    publishedOn: Date
+    publishedOn: string
     image: string
     author: string
     prev: string
