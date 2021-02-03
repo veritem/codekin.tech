@@ -2,7 +2,7 @@
 import React from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
-import { getAllPosts } from '@/lib/posts'
+// import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 
 //TODO: Fix the Navbar
@@ -70,10 +70,10 @@ Home.defaultProps = {
 }
 
 export async function getStaticProps() {
-    const posts = getAllPosts()
+    // const posts = getAllPosts()
     return {
         props: {
-            posts
+            // posts
         }
     }
 }
