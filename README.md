@@ -1,6 +1,6 @@
 # Programming blog
 
-![ci](https://github.com/makuzaverite/codekin.tech/workflows/ci/badge.svg)
+[![CI](https://github.com/makuzaverite/codekin.tech/actions/workflows/ci.yml/badge.svg)](https://github.com/makuzaverite/codekin.tech/actions/workflows/ci.yml)
 ![tests](https://github.com/makuzaverite/codekin.tech/workflows/tests/badge.svg)
 
 > [CodeKin](https://codekin.tech)
