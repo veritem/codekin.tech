@@ -11,42 +11,56 @@ image: /images/esm.jpg
 # ESM modules in Nodejs
 
 
-
-By June 2015, esmodules were standrized as part of es2015
-   July 2017, it was added into nodejs, in experimental
+With the introduction of Nodejs in May of 2009 it's [module](https://www.computerhope.com/jargon/m/module.htm) system was  [CommonJS](https://en.wikipedia.org/wiki/CommonJS) by defualt. It was created in January of 2009 to address the lack of a standard way for  structuring and orginization JavaScript codes. ever since then it was the  standard that Nodejs uses when working with modules.
 
 
-   Why did it take so long to add esmodules in nodejs
+```js
+ //add cjs module example code here
+```
 
 
-   what are esmodules in nodejs
+ESModule is a new standard way of writting module JavaScript code, it was added into the spect in june of 2015, It was added into node in the january of 2017 in experimental where you  could use them by running nodejs and add `--experimental` flag
 
 
-   So is it just syntatic differences, no
 
 
-   The differences between cjs and Esm
+```js
+ //add esm module example code here
+```
 
 
-   Esm is strict while cjs is not
+## Points
 
-   in stry and catch
-
-   if the variable is not defined it will through an error
-   x is global
+   1. Why did it take so long to add esmodules in nodejs
 
 
-   this.y will through an exception
-
-   Esm is browser compatible while cjs is not
-   Esm is module
-   Cjs is not allowed to import it's a sycript syntanx
-   Esm is sync and Supports top level await while cjs does not
+   2. what are esmodules in nodejs
 
 
-   But for editors in order to parse text they need to know when a prticular file is a module or is a nomral js file
+   4. So is it just syntatic differences, no
 
-   The came up with a rule that module is esm extension is mjs
+
+   5. The differences between cjs and Esm
+
+
+   4. Esm is strict while cjs is not
+
+   5. in stry and catch
+
+   6. if the variable is not defined it will through an error x is global this.y will through an exception
+
+   7. Esm is browser compatible while cjs is not
+
+   8. Esm is module
+
+   9. Cjs is not allowed to import it's a sycript syntanx
+
+   10. Esm is sync and Supports top level await while cjs does not
+
+
+   11. But for editors in order to parse text they need to know when a prticular file is a module or is a nomral js file
+
+   13. The came up with a rule that module is esm extension is mjs
                               module is cjs when extension is js
 
    But community didn't accept the proposal
