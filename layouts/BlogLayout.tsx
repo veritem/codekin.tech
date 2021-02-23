@@ -26,7 +26,7 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
                     {frontMatter.readTime.text}
                 </p>
 
-                <div className="w-full h-1/4">
+                <div className="w-full h-1/4 mb-12">
                     <Image src={frontMatter.image} width={900} height={500} />
                 </div>
 
@@ -36,7 +36,7 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
                     {frontMatter.next && (
                         <Link href={frontMatter.next}>
                             <a className=" text-blue-600 capitalize underline">
-                                Next: {frontMatter.next}
+                                Next:{'   '} {frontMatter.next}
                             </a>
                         </Link>
                     )}

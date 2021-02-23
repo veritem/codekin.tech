@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
@@ -6,7 +5,6 @@ import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 
 //TODO: Fix the Navbar
-//TODO: Fix the title for new blog and proper fomattting of dates
 
 export default function Home({ posts }): React.ReactElement {
     return (
@@ -17,7 +15,7 @@ export default function Home({ posts }): React.ReactElement {
             <Container>
                 <div className="mt-12">
                     {posts.length >= 1 && (
-                        <h2 className="text-3xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-4">
+                        <h2 className="text-3xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-16">
                             Recent posts
                         </h2>
                     )}
@@ -30,7 +28,7 @@ export default function Home({ posts }): React.ReactElement {
                                         {post.title}
                                     </a>
                                 </Link>
-                                <p className="mt-3 mb-4 font-helper dark:text-white">
+                                <p className="mt-3 text-sm text-gray-500 mb-4 font-helper dark:text-white">
                                     {post.summary}
                                 </p>
                             </div>
