@@ -98,7 +98,7 @@ In node to use esmodules is Simple make sure you are running  `node v12.0` or hi
 ```
 
 
-If you are Using typeScript in your workflow, you can configure the compiler to output ESmodules, to do so all you need to do is adding `"module":"ES2020"` in `tsconfig.json`
+If you are Using typeScript in your workflow, you can configure the compiler to output ESmodules, to do so all you need to do is adding `module:ES2020` in `tsconfig.json`
 
 
 ```js
@@ -108,15 +108,13 @@ If you are Using typeScript in your workflow, you can configure the compiler to 
     "target": "ES2015",
     "module": "ES2020",
     "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
   }
 }
 ```
 
 
 ### Resources
-- [Nodeconf Talk](https://www.youtube.com/watch?v=mMEKrHmZLpQ)
+- [NodeConf Talk](https://www.youtube.com/watch?v=mMEKrHmZLpQ)
 - [TC39 SPEC](https://tc39.es/ecma262/#sec-modules)
 - [Nodejs Documentation](https://nodejs.org/api/esm.html#esm_modules_ecmascript_modules)
-- [Mozilla](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
+- [Mozilla Blog](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
