@@ -16,7 +16,7 @@ export default function Nav(): React.ReactElement {
                     <div>
                         <Link href="/">
                             <a className=" dark:text-white font-display capitalize font-bold text-xl">
-                                codeKin.tech
+                                codekin.tech
                             </a>
                         </Link>
                     </div>

@@ -28,7 +28,7 @@ export default function Home({ posts }): React.ReactElement {
                                         {post.title}
                                     </a>
                                 </Link>
-                                <p className="mt-3 text-sm text-gray-500 mb-4 font-helper dark:text-white">
+                                <p className="mt-3 text-sm text-gray-800 mb-4 font-helper dark:text-white">
                                     {post.summary}
                                 </p>
                             </div>

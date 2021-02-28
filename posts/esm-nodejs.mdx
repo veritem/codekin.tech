@@ -2,113 +2,76 @@
 title: ES modules in Node
 publishedOn: Sun, 31 Jan 2021 19:46:46 GMT
 author: Makuza Makuza Verite
-summary: The modern JavaScript Module system
+summary: Standard Module system for JavaScript
 slug: esm-nodejs
 url: https://codekin.tech/esm-nodejs
 image: /images/esm.jpg
 ---
 
-<!-- ## esmodules in Nodejs -->
 
+## History
 
-With the introduction of Nodejs in May of 2009 it's [module](https://www.computerhope.com/jargon/m/module.htm) system was  [CommonJS](https://en.wikipedia.org/wiki/CommonJS) by default. It was created in January of 2009 to address the lack of a standard way for  structuring and orginization JavaScript codes. ever since then it was the  standard that Nodejs uses when working with modules.
-
-
-```js
- //add cjs module example code here
-```
-
-
-ESModule is a new standard way of writting module JavaScript code, it was added into the spect in june of 2015, It was added into node in the january of 2017 in experimental where you  could use them by running nodejs and add `--experimental` flag
-
-
+With the introduction of Nodejs in May of 2009 it's [module](https://www.computerhope.com/jargon/m/module.htm) system was  [CommonJS](https://en.wikipedia.org/wiki/CommonJS) by default. It was created in January of 2009 to address the lack of a standard way for  structuring and orginizing JavaScript codes. ever since then it was the  standard that Nodejs uses when working with modules.
 
 
 ```js
- //add esm module example code here
+  //CommonJS code example
+  var file = require('./file_path')
+
+  function sayHello(){
+     console.log("Hello")
+  }
+
+  exports.sayHello = sayHello
 ```
 
 
-## Points
-
-   1. Why did it take so long to add esmodules in nodejs
+ESModule is a new standard way of writting modular JavaScript code, It's proposal was approved in June of 2015 ([ES2015](https://developers.google.com/web/shows/ttt/series-2/es2015)), It was added into node in the january of 2017 in experimental where you  could use them by running nodejs and add `--experimental` flag to make it work.
 
 
-   2. what are esmodules in nodejs
+```js
+//Esm code example
+import file from 'file_path'
+
+export function sayHello(){
+   console.log("hello")
+}
+```
+
+### ESmodules Vs CommonJS
 
 
-   4. So is it just syntatic differences, no
+1. Esmodule have a declarative syntax (for importing and exporting) while commonjs use `require`
+1. Esmodules can be statically
+
+   In CommonJS You don't load a module you execute a module. while in esm modules are parsed.
 
 
-   5. The differences between cjs and Esm
+2. Esmodules is asynchronous
+
+  This simply means that with many imports loading, parsing, binding can happen concurrently before execution stats. While in CommonJS loading execution happens at the sametime so it is synchronous.
 
 
-   4. Esm is strict while cjs is not
-
-   5. in stry and catch
-
-   6. if the variable is not defined it will through an error x is global this.y will through an exception
-
-   7. Esm is browser compatible while cjs is not
-
-   8. Esm is module
-
-   9. Cjs is not allowed to import it's a sycript syntanx
-
-   10. Esm is sync and Supports top level await while cjs does not
+3. EsModules Supports [top level  await](https://github.com/tc39/proposal-top-level-await) outside of async which can be help full to asynchoously readfile or conditioanally import a function. this feature is available in `node v13.3+`
 
 
-   11. But for editors in order to parse text they need to know when a prticular file is a module or is a nomral js file
+```js
+   const getData = await import(`/path/another_path`);
+```
 
-   13. The came up with a rule that module is esm extension is mjs
-                              module is cjs when extension is js
-
-   But community didn't accept the proposal
-
-   In 2020 node.js introduced a capcity to add esm to node.js projects
-
-   ```js
-   {
-      type:"module"
-   }
-   ```
-
-   The writers of the esm forces us to add extensions so that we can become browser compatible, because that's how
-   browsers do it.
-
-   You can't run a js file module into the browser without the extension
+4. Esm are static by default
+5. To use esm you have to add extension in node to make compatibility with browser
+6. You can't run a js file module into the browser without the extension
 
 
 
-  ### Esm is statically parsed
-
-  In cjs the require statment does execution of the imported piece of code
-
-
-  ### ESM is an async
-
-  This simply means that loading, parsing, binding can happen concurrently before execution stats
-
-
-  Differences with Cjs
-
-  1. Esm  loading/parsing is sync and concurrent(Execution is synchronous)  while in cjs loading is synchronous and serial(loading === execution)
-
-  2. await ('./module.js') === require('../module.js')
-  3. Doesn't stop  sync actions while cjs stops sync actions
-  4. Supports top level await while cjs doesn't
-
-
-  Todo do async previous it was alowed inside async top level, but waht if we want todo it asyncnously, Esm modules does it. you can include a file asynclonusly.
-
-
-  ### What if you use Babel
+### What if you use Babel
 
   Using this there is no two stage parsing/execution: no spec-compliant
   It uses The node.js module resolution
 
 
-  ### Esm vs Babel
+### Esm vs Babel
 
   Esm is strick, Babel is also strick
   Esm is browser compatible, Babel's transipiration is not
@@ -118,20 +81,66 @@ ESModule is a new standard way of writting module JavaScript code, it was added 
 
 
 
-  ### Exports
+### How to use ESmodules
 
-  Remember main in Package.json the entry point to the package
+Currently all major Browsers supports [ESModules natively](https://caniuse.com/?search=esm), so there is no need to load a big, giant bundled file which can make the performance slow. you can split it into small pieces. using esmodules will make browsers loading each module as needed. which can make your applications faster. to use esmodules in Browsers all you need todo is adding `type="module"` in script tag
 
-  #### conditionaly Exports
-
-  You can conditioanally exports both esm and cjs
-
-
-  ## Migrating to esm
+```js
+ <script type="module" src="file_path"></script>
+```
 
 
-### Resouce
-- [Nodeconf](https://www.youtube.com/watch?v=mMEKrHmZLpQ)
+In node to use esmodules is Simple make sure you are running  `node v12.0` or higher and in package.json add a property called type with it's value. That's it you don't have to do any thing else every fature of esmodules should work.
+
+```js
+   {
+      type:"module"
+   }
+```
+
+   <!-- 5. in stry and catch
+
+   4. Esm is strict while cjs is not
+   6. if the variable is not defined it will through an error x is global this.y will through an exception
+
+   7. Esm is browser compatible while cjs is not
+
+   8. Esm is module -->
+
+
+   <!-- 11. But for editors in order to parse text they need to know when a prticular file is a module or is a nomral js file -->
+
+   <!-- 13. The came up with a rule that module is esm extension is mjs
+                              module is cjs when extension is js -->
+
+
+<!--
+  ### Esm is statically parsed
+
+  In cjs the require statment does execution of the imported piece of code
+
+
+  ### ESM is an async
+
+
+
+
+  Differences with Cjs
+
+  1. Esm  loading/parsing is sync and concurrent(Execution is synchronous)  while in cjs loading is synchronous and serial(loading === execution)
+
+  2. await ('./module.js') === require('../module.js')
+  3. Doesn't stop  sync actions while cjs stops sync actions
+
+
+  Todo do async previous it was alowed inside async top level, but waht if we want todo it asyncnously, Esm modules does it. you can include a file asynclonusly.
+
+
+
+ -->
+
+### Resources
+- [Nodeconf Talk](https://www.youtube.com/watch?v=mMEKrHmZLpQ)
 - [TC39 SPEC](https://tc39.es/ecma262/#sec-modules)
-- [Nodejs Documentations](https://nodejs.org/api/esm.html#esm_modules_ecmascript_modules)
+- [Nodejs Documentation](https://nodejs.org/api/esm.html#esm_modules_ecmascript_modules)
 - [Mozilla](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
