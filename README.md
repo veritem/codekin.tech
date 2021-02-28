@@ -1,6 +1,16 @@
 # My Programming Garden on Internet
+[![CI](https://github.com/makuzaverite/codekin.tech/actions/workflows/ci.yml/badge.svg)](https://github.com/makuzaverite/codekin.tech/actions/workflows/ci.yml)
+[![Test](https://github.com/makuzaverite/codekin.tech/actions/workflows/test.yml/badge.svg)](https://github.com/makuzaverite/codekin.tech/actions/workflows/test.yml)
 
-![ci](https://github.com/makuzaverite/codekin.tech/workflows/ci/badge.svg)
-![tests](https://github.com/makuzaverite/codekin.tech/workflows/tests/badge.svg)
 
 > [CodeKin](https://codekin.tech)
+
+
+
+## Maintainers
+
+- [@makuzaverite](github.com/makuzaverite)
+
+## Licence
+
+This Project is under [MIT](https://github.com/makuzaverite/codekin.tech/blob/main/LICENSE) licence
