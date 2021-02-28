@@ -4,6 +4,7 @@ import IndexLayout from './index'
 import Image from 'next/image'
 import Link from 'next/link'
 import formatDate from '../lib/formatDate'
+import Slug from 'pages/[slug]'
 
 interface BlogLayoutProps {
     frontMatter: PostHeading
@@ -32,19 +33,11 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
 
                 <div className="prose dark:prose-dark max-w-none w-full">{children}</div>
 
-                <div className=" mt-8 flex justify-between">
-                    {frontMatter.next && (
-                        <Link href={frontMatter.next}>
-                            <a className=" text-blue-600 capitalize underline">
-                                Next:{'   '} {frontMatter.next}
-                            </a>
-                        </Link>
-                    )}
-                    {frontMatter.prev && (
-                        <Link href={frontMatter.prev}>
-                            Previous <a> {frontMatter.prev} </a>
-                        </Link>
-                    )}
+                <div className=" mt-8 text-right">
+                    <Link
+                        href={`https://github.com/makuzaverite/codekin.tech/tree/main/posts/${frontMatter.slug}.mdx`}>
+                        <a>Edit this page</a>
+                    </Link>
                 </div>
             </article>
         </IndexLayout>
