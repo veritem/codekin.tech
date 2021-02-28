@@ -42,7 +42,7 @@ export function sayHello(){
 
 
 1. Esmodule have a declarative syntax (for importing and exporting) while commonjs use `require`
-1. Esmodules can be statically
+1. Esmodules can be statically Imported.
 
    In CommonJS You don't load a module you execute a module. while in esm modules are parsed.
 
@@ -59,31 +59,29 @@ export function sayHello(){
    const getData = await import(`/path/another_path`);
 ```
 
-4. Esm are static by default
+4. Esm imports are static by default
+
+   Imported modules are in [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
 5. To use esm you have to add extension in node to make compatibility with browser
-6. You can't run a js file module into the browser without the extension
 
 
-
-### What if you use Babel
-
-  Using this there is no two stage parsing/execution: no spec-compliant
-  It uses The node.js module resolution
+You might be thinking that why esmodules while [Babel](https://babeljs.io/) already does the same thing, the answers is no. Babel does a good job at transpiring JavaScript code but it's different from esmodules. since it uses the node.js module resolution.
 
 
 ### Esm vs Babel
 
-  Esm is strick, Babel is also strick
-  Esm is browser compatible, Babel's transipiration is not
-  Esm is statically parsed, Babel transipiration is not
-  Esm is async and Supports top level await, Babel transipiration is not and doesnot
-  ESM is native, Babel is transpired
-
-
+  1. Esm is browser compatible but  Babel's transipiration is not because it uses nodejs module system which is commonJS and commonJs doesn't run in browser.
+  3. Esm is statically parsed, Babel transipiration is not.
+  Esmodules is statically parsed while Babel's transpired is is parsed and excuted at the same time.
+  4. Esm is async and Supports top level await, Babel transipiration is not and doesn't.
+  5. ESM is native, Babel is a transipiration.
 
 ### How to use ESmodules
 
 Currently all major Browsers supports [ESModules natively](https://caniuse.com/?search=esm), so there is no need to load a big, giant bundled file which can make the performance slow. you can split it into small pieces. using esmodules will make browsers loading each module as needed. which can make your applications faster. to use esmodules in Browsers all you need todo is adding `type="module"` in script tag
+
+
 
 ```js
  <script type="module" src="file_path"></script>
@@ -92,12 +90,30 @@ Currently all major Browsers supports [ESModules natively](https://caniuse.com/?
 
 In node to use esmodules is Simple make sure you are running  `node v12.0` or higher and in package.json add a property called type with it's value. That's it you don't have to do any thing else every fature of esmodules should work.
 
+
+
 ```js
    {
       type:"module"
    }
 ```
 
+
+If you are Using typeScript in your workflow, you can configure the compiler to output ESmodules, to do so all you need to do is adding `"module":"ES2020"` in `tsconfig.json`
+
+
+```js
+  //tsconfig.json
+ {
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2020",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
+```
 
 
 ### Resources
