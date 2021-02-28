@@ -4,7 +4,6 @@ import IndexLayout from './index'
 import Image from 'next/image'
 import Link from 'next/link'
 import formatDate from '../lib/formatDate'
-import Slug from 'pages/[slug]'
 
 interface BlogLayoutProps {
     frontMatter: PostHeading
