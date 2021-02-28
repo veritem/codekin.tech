@@ -11,7 +11,7 @@ image: /images/esm.jpg
 
 ## History
 
-With the introduction of Nodejs in May of 2009 it's [module](https://www.computerhope.com/jargon/m/module.htm) system was  [CommonJS](https://en.wikipedia.org/wiki/CommonJS) by default. It was created in January of 2009 to address the lack of a standard way for  structuring and orginizing JavaScript codes. ever since then it was the  standard that Nodejs uses when working with modules.
+With the introduction of Nodejs in May of 2009 it's [module](https://www.computerhope.com/jargon/m/module.htm) system was  [CommonJS](https://en.wikipedia.org/wiki/CommonJS) by default. It was created in January of 2009 to address the lack of a standard way for  structuring and organizing JavaScript codes. ever since then it was the  standard that Nodejs uses when working with modules.
 
 
 ```js
@@ -26,7 +26,7 @@ With the introduction of Nodejs in May of 2009 it's [module](https://www.compute
 ```
 
 
-ESModule is a new standard way of writting modular JavaScript code, It's proposal was approved in June of 2015 ([ES2015](https://developers.google.com/web/shows/ttt/series-2/es2015)), It was added into node in the january of 2017 in experimental where you  could use them by running nodejs and add `--experimental` flag to make it work.
+ESModule is a new standard way of writing modular JavaScript code, It's proposal was approved in June of 2015 ([ES2015](https://developers.google.com/web/shows/ttt/series-2/es2015)), It was added into node in the january of 2017 in experimental where you  could use them by running nodejs and add `--experimental` flag to make it work.
 
 
 ```js
@@ -38,21 +38,21 @@ export function sayHello(){
 }
 ```
 
-### ESmodules Vs CommonJS
+### ESModules Vs CommonJS
 
 
-1. Esmodule have a declarative syntax (for importing and exporting) while commonjs use `require`
-1. Esmodules can be statically Imported.
+1. EsModule have a declarative syntax (for importing and exporting) while commonjs use `require` syntax
+1. EsModules can be statically Imported.
 
    In CommonJS You don't load a module you execute a module. while in esm modules are parsed.
 
 
-2. Esmodules is asynchronous
+2. EsModules are asynchronous
 
-  This simply means that with many imports loading, parsing, binding can happen concurrently before execution stats. While in CommonJS loading execution happens at the sametime so it is synchronous.
+  This simply means that with many imports loading, parsing, binding can happen concurrently before execution stats. While in CommonJS loading execution happens at the sometime so it is synchronous.
 
 
-3. EsModules Supports [top level  await](https://github.com/tc39/proposal-top-level-await) outside of async which can be help full to asynchoously readfile or conditioanally import a function. this feature is available in `node v13.3+`
+3. EsModules Supports [top level  await](https://github.com/tc39/proposal-top-level-await) outside of async which can be help full to asynchronously read a file or  a conditional import. this feature is available in `node v13.3+`
 
 
 ```js
@@ -71,11 +71,11 @@ You might be thinking that why esmodules while [Babel](https://babeljs.io/) alre
 
 ### Esm vs Babel
 
-  1. Esm is browser compatible but  Babel's transipiration is not because it uses nodejs module system which is commonJS and commonJs doesn't run in browser.
-  3. Esm is statically parsed, Babel transipiration is not.
-  Esmodules is statically parsed while Babel's transpired is is parsed and excuted at the same time.
-  4. Esm is async and Supports top level await, Babel transipiration is not and doesn't.
-  5. ESM is native, Babel is a transipiration.
+  1. Esm is browser compatible but  Babel's transpiration is not because it uses nodejs module system which is commonJS and commonJs doesn't run in browser.
+  3. Esm is statically parsed, Babel transpiration is not.
+  Esmodules is statically parsed while Babel's transpired is is parsed and executed at the same time.
+  4. Esm is async and Supports top level await, Babel transpiration is not and doesn't.
+  5. ESM is native, Babel is a transpiration.
 
 ### How to use ESmodules
 
@@ -88,8 +88,7 @@ Currently all major Browsers supports [ESModules natively](https://caniuse.com/?
 ```
 
 
-In node to use esmodules is Simple make sure you are running  `node v12.0` or higher and in package.json add a property called type with it's value. That's it you don't have to do any thing else every fature of esmodules should work.
-
+In node to use esmodules is Simple make sure you are running  `node v12.0` or higher and in package.json add a property called type with it's value. That's it you don't have to do any thing else every feature of esmodules should work.
 
 
 ```js
