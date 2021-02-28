@@ -15,7 +15,6 @@ export const BlogSeo: React.FC<PostHeading> = ({
         url: `http://codekin.tech/${image}`,
         alt: title
     }
-    console.log(SeoImages)
 
     return (
         <>
@@ -29,8 +28,23 @@ export const BlogSeo: React.FC<PostHeading> = ({
                     url,
                     title,
                     description: summary,
-                    images: [SeoImages],
-                    site_name: 'codekin'
+                    images: [
+                        {
+                            url: 'https://www.example.ie/og-image-01.jpg',
+                            width: 800,
+                            height: 600,
+                            alt: 'Og Image Alt'
+                        },
+                        {
+                            url: 'https://www.example.ie/og-image-02.jpg',
+                            width: 900,
+                            height: 800,
+                            alt: 'Og Image Alt Second'
+                        },
+                        { url: 'https://www.example.ie/og-image-03.jpg' },
+                        { url: 'https://www.example.ie/og-image-04.jpg' }
+                    ],
+                    site_name: ''
                 }}
                 twitter={{
                     handle: '@makuza_mugabo_verite',
@@ -38,6 +52,17 @@ export const BlogSeo: React.FC<PostHeading> = ({
                     cardType: 'summary_large_image'
                 }}
             />
+            {/* <ArticleJsonLd>
+             authorName={author}
+                dateModified={date}
+                datePublished={date}
+                description={summary}
+                images={[SeoImages.url]}
+                publisherLogo={'/android-chrome-192x192.png'}
+                publisherName="Makuza Mugabo Verite"
+                title={title}
+                url={url}
+            /> */}
         </>
     )
 }

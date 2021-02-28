@@ -32,7 +32,7 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
                 </div>
 
                 <div className="prose dark:prose-dark max-w-none w-full">{children}</div>
-                <div className="mt-8 text-right dark:text-white text-black">
+                <div className="mt-8 text-right text-blue-500">
                     <Link
                         href={`https://github.com/makuzaverite/codekin.tech/blob/main/posts/${frontMatter.slug}.mdx`}>
                         <a>Edit this page</a>
