@@ -15,6 +15,7 @@ export const BlogSeo: React.FC<PostHeading> = ({
         url: `http://codekin.tech/${image}`,
         alt: title
     }
+    console.log(SeoImages)
 
     return (
         <>
@@ -28,19 +29,14 @@ export const BlogSeo: React.FC<PostHeading> = ({
                     url,
                     title,
                     description: summary,
-                    images: [SeoImages]
+                    images: [SeoImages],
+                    site_name: 'codekin'
                 }}
-            />
-            <ArticleJsonLd
-                authorName={author}
-                dateModified={date}
-                datePublished={date}
-                description={summary}
-                images={[SeoImages.url]}
-                publisherLogo={'/android-chrome-192x192.png'}
-                publisherName="Makuza Mugabo Verite"
-                title={title}
-                url={url}
+                twitter={{
+                    handle: '@makuza_mugabo_verite',
+                    site: 'veritem.me',
+                    cardType: 'summary_large_image'
+                }}
             />
         </>
     )
