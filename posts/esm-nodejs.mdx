@@ -1,0 +1,120 @@
+---
+title: ES modules in Node
+publishedOn: Sun, 31 Jan 2021 19:46:46 GMT
+author: Makuza Makuza Verite
+summary: Standard Module system for JavaScript
+slug: esm-nodejs
+url: https://codekin.tech/esm-nodejs
+image: /images/esm.jpg
+---
+
+
+## History
+
+With the introduction of Nodejs in May of 2009 it's [module](https://www.computerhope.com/jargon/m/module.htm) system was  [CommonJS](https://en.wikipedia.org/wiki/CommonJS) by default. It was created in January of 2009 to address the lack of a standard way for  structuring and organizing JavaScript codes. ever since then it was the  standard that Nodejs uses when working with modules.
+
+
+```js
+  //CommonJS code example
+  var file = require('./file_path')
+
+  function sayHello(){
+     console.log("Hello")
+  }
+
+  exports.sayHello = sayHello
+```
+
+
+ESModule is a new standard way of writing modular JavaScript code, It's proposal was approved in June of 2015 ([ES2015](https://developers.google.com/web/shows/ttt/series-2/es2015)), It was added into node in the january of 2017 in experimental where you  could use them by running nodejs and add `--experimental` flag to make it work.
+
+
+```js
+//Esm code example
+import file from 'file_path'
+
+export function sayHello(){
+   console.log("hello")
+}
+```
+
+### ESModules Vs CommonJS
+
+
+1. EsModule have a declarative syntax (for importing and exporting) while commonjs use `require` syntax
+1. EsModules can be statically Imported.
+
+   In CommonJS You don't load a module you execute a module. while in esm modules are parsed.
+
+
+2. EsModules are asynchronous
+
+  This simply means that with many imports loading, parsing, binding can happen concurrently before execution stats. While in CommonJS loading execution happens at the sometime so it is synchronous.
+
+
+3. EsModules Supports [top level  await](https://github.com/tc39/proposal-top-level-await) outside of async which can be help full to asynchronously read a file or  a conditional import. this feature is available in `node v13.3+`
+
+
+```js
+   const getData = await import(`/path/another_path`);
+```
+
+4. Esm imports are static by default
+
+   Imported modules are in [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
+5. To use esm you have to add extension in node to make compatibility with browser
+
+
+You might be thinking that why esmodules while [Babel](https://babeljs.io/) already does the same thing, the answers is no. Babel does a good job at transpiring JavaScript code but it's different from esmodules. since it uses the node.js module resolution.
+
+
+### Esm vs Babel
+
+  1. Esm is browser compatible but  Babel's transpiration is not because it uses nodejs module system which is commonJS and commonJs doesn't run in browser.
+  3. Esm is statically parsed, Babel transpiration is not.
+  Esmodules is statically parsed while Babel's transpired is is parsed and executed at the same time.
+  4. Esm is async and Supports top level await, Babel transpiration is not and doesn't.
+  5. ESM is native, Babel is a transpiration.
+
+### How to use ESmodules
+
+Currently all major Browsers supports [ESModules natively](https://caniuse.com/?search=esm), so there is no need to load a big, giant bundled file which can make the performance slow. you can split it into small pieces. using esmodules will make browsers loading each module as needed. which can make your applications faster. to use esmodules in Browsers all you need todo is adding `type="module"` in script tag
+
+
+
+```js
+ <script type="module" src="file_path"></script>
+```
+
+
+In node to use esmodules is Simple make sure you are running  `node v12.0` or higher and in package.json add a property called type with it's value. That's it you don't have to do any thing else every feature of esmodules should work.
+
+
+```js
+   {
+      type:"module"
+   }
+```
+
+
+If you are Using typeScript in your workflow, you can configure the compiler to output ESmodules, to do so all you need to do is adding `module:ES2020` in `tsconfig.json`
+
+
+```js
+  //tsconfig.json
+ {
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2020",
+    "strict": true,
+  }
+}
+```
+
+
+### Resources
+- [NodeConf Talk](https://www.youtube.com/watch?v=mMEKrHmZLpQ)
+- [TC39 SPEC](https://tc39.es/ecma262/#sec-modules)
+- [Nodejs Documentation](https://nodejs.org/api/esm.html#esm_modules_ecmascript_modules)
+- [Mozilla Blog](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)

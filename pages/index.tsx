@@ -1,12 +1,10 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
-// import { getAllPosts } from '@/lib/posts'
+import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 
 //TODO: Fix the Navbar
-//TODO: Fix the title for new blog and proper fomattting of dates
 
 export default function Home({ posts }): React.ReactElement {
     return (
@@ -16,21 +14,21 @@ export default function Home({ posts }): React.ReactElement {
             </Head>
             <Container>
                 <div className="mt-12">
-                    {posts.length > 1 && (
-                        <h2 className="text-xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-4">
+                    {posts.length >= 1 && (
+                        <h2 className="text-3xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-16">
                             Recent posts
                         </h2>
                     )}
 
                     <div>
                         {posts.map((post, index) => (
-                            <div key={`${post.slug}-${index}`} className=" py-4">
+                            <div key={`${post.slug}-${index}`} className="py-2">
                                 <Link href={`/${post.slug}`}>
                                     <a className=" font-display text-blue-600  text-xl dark:text-blue-500">
                                         {post.title}
                                     </a>
                                 </Link>
-                                <p className="mt-6 mb-4 font-helper dark:text-white">
+                                <p className="mt-3 text-sm text-gray-800 mb-4 font-helper dark:text-white">
                                     {post.summary}
                                 </p>
                             </div>
@@ -70,10 +68,10 @@ Home.defaultProps = {
 }
 
 export async function getStaticProps() {
-    // const posts = getAllPosts()
+    const posts = getAllPosts()
     return {
         props: {
-            // posts
+            posts
         }
     }
 }
