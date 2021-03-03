@@ -8,11 +8,14 @@ import Link from 'next/link'
 
 export default function Home({ posts }): React.ReactElement {
     const getLastUpdateDate = (date: Date): string => {
-        const day = date.getDate()
-        const month = date.getMonth()
-        const year = date.getFullYear()
+        const d = new Date(date)
+        const day = d.getDate() + 1
+        const month = d.getMonth()
+        const year = d.getFullYear()
         return `${day}/${month}/${year}`
     }
+
+    console.log(getLastUpdateDate(new Date()))
 
     return (
         <Fragment>
@@ -29,13 +32,13 @@ export default function Home({ posts }): React.ReactElement {
 
                     <div>
                         {posts.map((post, index) => (
-                            <div key={`${post.slug}-${index}`} className="py-2">
+                            <div key={`${post.slug}-${index}`} className="py-2 mb-6">
                                 <Link href={`/${post.slug}`}>
                                     <a className=" font-display text-blue-600  text-xl dark:text-blue-500">
                                         {post.title}
                                     </a>
                                 </Link>
-                                <p className="mt-3 text-sm text-gray-800 mb-4 font-helper dark:text-white">
+                                <p className="mt-3 text-sm text-gray-800  font-helper dark:text-white">
                                     {post.summary}
                                 </p>
                                 <p className="text-gray-400">
