@@ -7,6 +7,15 @@ import Link from 'next/link'
 //TODO: Fix the Navbar
 
 export default function Home({ posts }): React.ReactElement {
+    const getLastUpdateDate = (date: Date): string => {
+        const day = date.getDay()
+        const month = date.getMonth()
+        const year = date.getFullYear()
+        return `${day}/${month}/${year}`
+    }
+
+    console.log(getLastUpdateDate(new Date()))
+
     return (
         <Fragment>
             <Head>
@@ -31,7 +40,9 @@ export default function Home({ posts }): React.ReactElement {
                                 <p className="mt-3 text-sm text-gray-800 mb-4 font-helper dark:text-white">
                                     {post.summary}
                                 </p>
-                                <p className="text-gray-400">Last updated {post.publishedOn}</p>
+                                <p className="text-gray-400">
+                                    Last updated {getLastUpdateDate(post.publishedOn)}
+                                </p>
                             </div>
                         ))}
                     </div>
