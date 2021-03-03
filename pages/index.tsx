@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
 import { getAllPosts } from '@/lib/posts'
@@ -7,8 +7,9 @@ import Link from 'next/link'
 //TODO: Fix the Navbar
 
 export default function Home({ posts }): React.ReactElement {
+    console.log({ posts })
     return (
-        <>
+        <Fragment>
             <Head>
                 <title>codeKin</title>
             </Head>
@@ -31,11 +32,12 @@ export default function Home({ posts }): React.ReactElement {
                                 <p className="mt-3 text-sm text-gray-800 mb-4 font-helper dark:text-white">
                                     {post.summary}
                                 </p>
+                                <p>Last updated {post.publishedOn}</p>
                             </div>
                         ))}
                     </div>
 
-                    {posts.length == 0 && (
+                    {/* {posts.length == 0 && (
                         <div>
                             <div className="font-black text-white text-center md:text-9xl sm:text-6xl">
                                 <span className="bg-gradient-to-r text-transparent font-display bg-clip-text from-purple-400 to-pink-500">
@@ -56,10 +58,10 @@ export default function Home({ posts }): React.ReactElement {
                                 </Link>
                             </p>
                         </div>
-                    )}
+                    )} */}
                 </div>
             </Container>
-        </>
+        </Fragment>
     )
 }
 

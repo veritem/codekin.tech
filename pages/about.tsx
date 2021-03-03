@@ -1,12 +1,19 @@
 import Head from 'next/head'
 import Container from '@/layouts/index'
+import { NextSeo } from 'next-seo'
 
 export default function about(): React.ReactElement {
+    const SEO = {
+        title: 'About codekin',
+        description: 'why codekin'
+    }
+
     return (
         <>
             <Head>
                 <title>About - codeKin</title>
             </Head>
+            <NextSeo {...SEO} />
             <Container>
                 <h1 className=" text-4xl mt-12 mb-12 text-center font-bold font-display dark:text-white">
                     About codeKin.tech
