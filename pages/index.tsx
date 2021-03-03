@@ -8,13 +8,11 @@ import Link from 'next/link'
 
 export default function Home({ posts }): React.ReactElement {
     const getLastUpdateDate = (date: Date): string => {
-        const day = date.getDay()
+        const day = date.getDate()
         const month = date.getMonth()
         const year = date.getFullYear()
         return `${day}/${month}/${year}`
     }
-
-    console.log(getLastUpdateDate(new Date()))
 
     return (
         <Fragment>
@@ -41,7 +39,7 @@ export default function Home({ posts }): React.ReactElement {
                                     {post.summary}
                                 </p>
                                 <p className="text-gray-400">
-                                    Last updated {getLastUpdateDate(post.publishedOn)}
+                                    Last updated {getLastUpdateDate(post.publishedOn as Date)}
                                 </p>
                             </div>
                         ))}
