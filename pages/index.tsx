@@ -5,14 +5,11 @@ import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 
 //TODO: Fix the Navbar
-
 export default function Home({ posts }): React.ReactElement {
     const getLastUpdateDate = (date: Date): string => {
-        const d = new Date(date)
-        const day = d.getDate() + 1
-        const month = d.getMonth()
-        const year = d.getFullYear()
-        return `${day}/${month}/${year}`
+        // return `${day}/${month}/${year}`
+
+        return new Date(date).toLocaleString()
     }
 
     console.log(getLastUpdateDate(new Date()))
@@ -38,10 +35,10 @@ export default function Home({ posts }): React.ReactElement {
                                         {post.title}
                                     </a>
                                 </Link>
-                                <p className="mt-3 text-sm text-gray-800  font-helper dark:text-white">
+                                <p className="mt-3 text-base text-gray-800 mb-2  font-helper dark:text-white">
                                     {post.summary}
                                 </p>
-                                <p className="text-gray-400">
+                                <p className="text-gray-400 text-sm">
                                     Last updated {getLastUpdateDate(post.publishedOn as Date)}
                                 </p>
                             </div>
