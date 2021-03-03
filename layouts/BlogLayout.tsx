@@ -4,6 +4,7 @@ import IndexLayout from './index'
 import Image from 'next/image'
 import Link from 'next/link'
 import formatDate from '../lib/formatDate'
+import Footer from '@/components/Footer'
 
 interface BlogLayoutProps {
     frontMatter: PostHeading
@@ -38,6 +39,7 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
                     </Link>
                 </div>
             </article>
+            <Footer />
         </IndexLayout>
     )
 }

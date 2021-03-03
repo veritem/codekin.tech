@@ -19,7 +19,7 @@ export const BlogSeo: React.FC<PostHeading> = ({
     return (
         <>
             <NextSeo
-                title={`${title}`}
+                title={`codekin | ${title}`}
                 description={`${summary}`}
                 canonical={url}
                 openGraph={{
@@ -30,19 +30,11 @@ export const BlogSeo: React.FC<PostHeading> = ({
                     description: summary,
                     images: [
                         {
-                            url: 'https://www.example.ie/og-image-01.jpg',
+                            url: `http://codekin.tech/${image}`,
                             width: 800,
                             height: 600,
-                            alt: 'Og Image Alt'
-                        },
-                        {
-                            url: 'https://www.example.ie/og-image-02.jpg',
-                            width: 900,
-                            height: 800,
-                            alt: 'Og Image Alt Second'
-                        },
-                        { url: 'https://www.example.ie/og-image-03.jpg' },
-                        { url: 'https://www.example.ie/og-image-04.jpg' }
+                            alt: 'Image'
+                        }
                     ],
                     site_name: ''
                 }}

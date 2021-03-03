@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Container from '@/layouts/index'
 import Head from 'next/head'
 import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 
 //TODO: Fix the Navbar
-
 export default function Home({ posts }): React.ReactElement {
+    const getLastUpdateDate = (date: Date): string => {
+        // return `${day}/${month}/${year}`
+
+        return new Date(date).toLocaleString()
+    }
+
+    console.log(getLastUpdateDate(new Date()))
+
     return (
-        <>
+        <Fragment>
             <Head>
                 <title>codeKin</title>
             </Head>
@@ -22,20 +29,23 @@ export default function Home({ posts }): React.ReactElement {
 
                     <div>
                         {posts.map((post, index) => (
-                            <div key={`${post.slug}-${index}`} className="py-2">
+                            <div key={`${post.slug}-${index}`} className="py-2 mb-6">
                                 <Link href={`/${post.slug}`}>
                                     <a className=" font-display text-blue-600  text-xl dark:text-blue-500">
                                         {post.title}
                                     </a>
                                 </Link>
-                                <p className="mt-3 text-sm text-gray-800 mb-4 font-helper dark:text-white">
+                                <p className="mt-3 text-base text-gray-800 mb-2  font-helper dark:text-white">
                                     {post.summary}
+                                </p>
+                                <p className="text-gray-400 text-sm">
+                                    Last updated {getLastUpdateDate(post.publishedOn as Date)}
                                 </p>
                             </div>
                         ))}
                     </div>
 
-                    {posts.length == 0 && (
+                    {/* {posts.length == 0 && (
                         <div>
                             <div className="font-black text-white text-center md:text-9xl sm:text-6xl">
                                 <span className="bg-gradient-to-r text-transparent font-display bg-clip-text from-purple-400 to-pink-500">
@@ -56,10 +66,10 @@ export default function Home({ posts }): React.ReactElement {
                                 </Link>
                             </p>
                         </div>
-                    )}
+                    )} */}
                 </div>
             </Container>
-        </>
+        </Fragment>
     )
 }
 
