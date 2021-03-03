@@ -1,4 +1,5 @@
 export default function Footer() {
+    const YEAR = new Date().getFullYear()
     return (
         <>
             <div className="border-gray-100 dark:border-gray-800 absolute bottom-1"></div>
@@ -6,7 +7,7 @@ export default function Footer() {
                 <p className="text-gray-800 dark:text-gray-200">Github</p>
                 <p className="text-gray-800 dark:text-gray-200">About</p>
                 <p className="text-gray-800 dark:text-gray-200">Contact</p>
-                <p className="text-gray-800 dark:text-gray-200">&copy; 2020</p>
+                <p className="text-gray-800 dark:text-gray-200">&copy; {YEAR}</p>
             </div>
         </>
     )
