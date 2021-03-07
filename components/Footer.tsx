@@ -1,7 +1,7 @@
 export default function Footer() {
     const YEAR = new Date().getFullYear()
     return (
-        <>
+        <section className="mb-32">
             <div className="border-gray-100 dark:border-gray-800"></div>
             <div className=" flex justify-between">
                 <p className="text-gray-800 dark:text-gray-200">Github</p>
@@ -9,6 +9,6 @@ export default function Footer() {
                 <p className="text-gray-800 dark:text-gray-200">Contact</p>
                 <p className="text-gray-800 dark:text-gray-200">&copy; {YEAR}</p>
             </div>
-        </>
+        </section>
     )
 }
