@@ -17,7 +17,7 @@ export const BlogLayout: React.FC<BlogLayoutProps> = ({
     return (
         <IndexLayout>
             <BlogSeo url={`https://codekin.tech/${frontMatter.slug}`} {...frontMatter} />
-            <article className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-32 w-full">
+            <article className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-28 w-full">
                 <h1 className="font-bold text-2xl  tracking-tight mt-0 mb-5 text-black dark:text-white">
                     {frontMatter.title}
                 </h1>

@@ -4,12 +4,28 @@ import Head from 'next/head'
 import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 
-//TODO: Fix the Navbar
 export default function Home({ posts }): React.ReactElement {
     const getLastUpdateDate = (date: Date): string => {
-        // return `${day}/${month}/${year}`
+        let d = new Date(date)
+        const day = d.getDate()
+        const year = d.getFullYear()
 
-        return new Date(date).toLocaleString()
+        const monthNames = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December'
+        ]
+
+        return `${day} ${monthNames[d.getMonth()]} ${year}`
     }
 
     console.log(getLastUpdateDate(new Date()))
@@ -39,7 +55,7 @@ export default function Home({ posts }): React.ReactElement {
                                     {post.summary}
                                 </p>
                                 <p className="text-gray-400 text-sm">
-                                    Last updated {getLastUpdateDate(post.publishedOn as Date)}
+                                    last updated {getLastUpdateDate(post.publishedOn as Date)}
                                 </p>
                             </div>
                         ))}
