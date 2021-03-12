@@ -11,7 +11,7 @@ interface SlugProps {
     frontMatter: PostHeading
 }
 
-export const Slug: React.FC<SlugProps> = ({ frontMatter, source }): React.ReactElement => {
+export const Slug: React.FC<SlugProps> = ({ frontMatter, source }) => {
     const content = hydrate(source as any, {
         components: MdxComponent
     })

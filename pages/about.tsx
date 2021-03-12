@@ -10,9 +10,6 @@ export default function about(): React.ReactElement {
 
     return (
         <>
-            <Head>
-                <title>About - codeKin</title>
-            </Head>
             <NextSeo {...SEO} />
             <Container>
                 <h1 className=" text-4xl mt-12 mb-12 text-center font-bold font-display dark:text-white">

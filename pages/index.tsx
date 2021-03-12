@@ -3,31 +3,25 @@ import Container from '@/layouts/index'
 import Head from 'next/head'
 import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
+import { NextPage } from 'next'
+import { getLastUpdateDate } from '@/lib/getLastUpdateDate'
+import matter from 'gray-matter'
+import orderby from 'lodash.orderby'
 
-export default function Home({ posts }): React.ReactElement {
-    const getLastUpdateDate = (date: Date): string => {
-        let d = new Date(date)
-        const day = d.getDate()
-        const year = d.getFullYear()
+type Post = {
+    title: string
+    publishedOn: Date
+    author: string
+    summary: string
+    slug: string
+    url: string
+}
 
-        const monthNames = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December'
-        ]
+interface Props {
+    posts: Post[]
+}
 
-        return `${day} ${monthNames[d.getMonth()]} ${year}`
-    }
-
+export const Home: NextPage<Props> = ({ posts }) => {
     return (
         <Fragment>
             <Head>
@@ -53,7 +47,7 @@ export default function Home({ posts }): React.ReactElement {
                                     {post.summary}
                                 </p>
                                 <p className="text-gray-400 text-sm">
-                                    last updated {getLastUpdateDate(post.publishedOn as Date)}
+                                    last updated {getLastUpdateDate(post.publishedOn)}
                                 </p>
                             </div>
                         ))}
@@ -91,11 +85,13 @@ Home.defaultProps = {
     posts: []
 }
 
-export async function getStaticProps() {
-    const posts = getAllPosts()
+export const getStaticProps = async () => {
+    const posts = orderby(getAllPosts(), ['publishedOn'], ['desc'])
     return {
         props: {
             posts
         }
     }
 }
+
+export default Home

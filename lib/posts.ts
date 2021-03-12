@@ -16,6 +16,7 @@ export const getAllPosts = () => {
         const fullPath = path.join(process.cwd(), 'posts', name)
         const file = fs.readFileSync(fullPath, 'utf-8')
         const { data, content } = matter(file)
+
         return { ...data, readTime: readingTime(content).text }
     })
 
