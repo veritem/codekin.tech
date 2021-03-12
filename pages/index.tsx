@@ -28,8 +28,6 @@ export default function Home({ posts }): React.ReactElement {
         return `${day} ${monthNames[d.getMonth()]} ${year}`
     }
 
-    console.log(getLastUpdateDate(new Date()))
-
     return (
         <Fragment>
             <Head>

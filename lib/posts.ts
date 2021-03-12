@@ -63,6 +63,7 @@ export const getAllSlugs = () => {
 
     const slugs = filenames.map((name) => {
         const filePath = path.join(postsPath, name)
+
         const file = fs.readFileSync(filePath, 'utf-8')
         const { data } = matter(file)
         return data
