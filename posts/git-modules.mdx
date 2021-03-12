@@ -1,18 +1,135 @@
 ---
 title: Git Modules
-publishedOn: Sun Feb 28 2021 13:32:16 GMT+0200 (Central Africa Time)
+publishedOn: Fri Mar 12 2021 12:19:07 GMT+0200 (Central Africa Time)
 author: Makuza Mugabo Verite
-summary: Definitive guide to mastering git modules
-slug: git-modules
+summary: Definitive guide to mastering git submodules
+slug: git-submodules
 url: https://codekin.tech/git-modules
-image: /images/esm.jpg
+image: /images/git-modules.jpg
 isPublished: true
 ---
 
 
-[Git](https://en.wikipedia.org/wiki/Git) has been an amazing tool in in software development industry. Once you start writing large complex softwares, managing them might be hard and tedious
+The most widely used version control framework is [Git](https://en.wikipedia.org/wiki/Git). Git keeps track of the modifications you make to files so you can see what you've done and go back to previous versions if you need to. Git also facilitates teamwork by allowing different people's modifications to be combined into a single source.
+
+The git module is an alias used in the codebase of your project to describe all of the git sub modules on which your project relies.
+
+
+## What is a git submodule?
+
+If you're working on a project within a git repository and you're overly reliant on another project within another git repository, you can either copy files from one repository and insert them into the other, or you can use package managers like [npm](https://www.npmjs.com/), [ruby Gem](https://rubygems.org/) or [PyPi](https://pypi.org/).The trouble with having code from a package manager is that it's challenging to configure, and if you're copying, it's much more difficult to combine the copied files with the improvements made to the code base by its authors.
+
+Simply a git submodule enables you to hold a git repository in the subdirectory of another git repository and handle their commits independently. Submodules aren't aware of git branches and aren't changed directly when the host repository is updated.
 
 
 
-- https://git-scm.com/docs/gitmodules
-- https://www.vogella.com/tutorials/GitSubmodules/article.html
+## When is it appropriate to use git submodules?
+
+Do the git submodule suit well with your use case? Let's figure it out below.
+
+
+  1. If the project's code you choose to use in your project don't change all that much.
+  2. When a project is rapidly evolving and modifications can interrupt APIs, submodules may be used to keep the project at a certain version.
+  3. etc..
+
+
+## How to add submodule to your git project?
+
+
+In my case, I've set up a git project over [here](https://github.com/codekinHQ/git-submodule-blog/tree/main) you can clone it and follow along to practice what we are going to be talking about.
+
+
+```branch
+   git clone https://github.com/codekinHQ/git-submodule-blog/tree/main
+```
+
+I have another project over [here](https://github.com/makuzaverite/codekin.tech) that i would like to add it as a submodule into my project, I run
+
+```bash
+   git submodule add https://github.com/makuzaverite/codekin.tech.git
+
+   Cloning into '/home/user/path/blog-examples/git-submodule-blog/codekin.tech'...
+    remote: Enumerating objects: 220, done.
+    remote: Counting objects: 100% (220/220), done.
+    remote: Compressing objects: 100% (144/144), done.
+    remote: Total 1217 (delta 143), reused 116 (delta 73), pack-reused 997
+    Receiving objects: 100% (1217/1217), 1.26 MiB | 313.00 KiB/s, done.
+    Resolving deltas: 100% (719/719), done.
+```
+
+Now have codekin.tech project as a submodule inside our project. It went on and cloned the repository we have targeted it pull, where you do `ls` or `dir` commands inside your project you are going to see a file named `.gitmodules` what is that? it's content in my case is
+
+```bash
+   [submodule "codekin.tech"]
+        path = codekin.tech
+        url = https://github.com/makuzaverite/codekin.tech.git
+```
+`.gitmodules` is a configuration file that holds the urls of your project's submodules as well as their local names.
+
+
+
+## How do I clone a project that contains git submodules?
+
+ when you do `git clone project_url` in project submodule by default you shall find not folder with no files in them. to get files back you need to run two commands
+
+ ```bash
+    git submodule init # initialize your local configuration
+    git submodule update # Fetches file from the submodules at their specific commits in your configurations
+ ```
+
+ Another way to do this is to use the `--recurse-submodules` flag when copying the repository. This wil auto matically initialize and submodule and update each submodule..
+
+```bash
+   git clone --recurse-submodules  #project url here
+```
+
+## How to update your submodule
+
+You may want to update your submodules to their latest version from their origin, run
+
+```bash
+   git submodule update
+```
+
+When you have changed remotes in submodules run
+
+```brash
+    git submodule update --remote
+```
+
+
+## How to get changes from submodules' remote?
+
+You can easy get changes from submodules upstream but running two commands
+
+```brash
+   git fetch
+   git merge
+```
+
+This easier way to do this is by running a single commands
+
+```bash
+   git submodule update --remote #submodule_name
+```
+
+## Submodule Ticks
+
+1. If you want to execute a command in each of your submodules, foreach is a great tool to have.
+
+    ```bash
+        # logs git status in each submodule
+        git submodule foreach 'git status'
+    ```
+2. You can use aliases for commands which might become long and you can set options configuration for them
+
+    ```bash
+       git config alias.sdiff '!'"git status && git submodule foreach 'git status'"
+       git config alias.spush 'push --recurse-submodules=on-demand'
+       git config alias.supdate 'submodule update --remote --merge'
+    ```
+
+I think this helped you to understand git submodules this is the time to move from sub directories to Submodules
+
+
+Happy Coding!
