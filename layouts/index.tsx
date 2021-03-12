@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav'
+import { NextPage } from 'next'
 
-const IndexLayout: React.FC = ({ children }): React.ReactElement => {
+const IndexLayout: NextPage = ({ children }) => {
     return (
         <section className="max-h-screen max-w-full">
             <Nav />
