@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 //TODO: Fix the Navbar
-
 export default function Nav(): React.ReactElement {
     const [mounted, setMounted] = useState<boolean>(false)
 
