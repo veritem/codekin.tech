@@ -1,7 +1,6 @@
 module.exports = {
-    poweredByHeader: false,
-    reactStrictMode: true,
     future: {
-        webpack5: true
+        webpack5: true,
+        strictPostcssConfiguration: true
     }
 }
