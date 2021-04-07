@@ -87,8 +87,6 @@ Home.defaultProps = {
 export const getStaticProps = async () => {
     const postsArray = getAllPosts()
 
-    console.log(postsArray)
-
     const posts = orderby(
         [...getAllPosts()].map((content) => content),
         ['publishedOn'],

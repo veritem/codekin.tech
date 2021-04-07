@@ -12,7 +12,7 @@
 }
 
 html {
-    min-width: 360px;
+    /* min-width: 360px; */
     scroll-behavior: smooth;
 }
 
@@ -39,7 +39,6 @@ html {
 }
 
 .prose img {
-    /* Don't apply styles to next/image */
     @apply m-0;
 }
 
@@ -122,14 +121,6 @@ pre {
 
 .mdx-marker {
     @apply block -mx-4 px-4 bg-gray-100 dark:bg-gray-800 border-l-4 border-blue-500;
-}
-
-/* Remove Safari input shadow on mobile */
-input[type='text'],
-input[type='email'] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
 }
 
 .metric-card > a {
