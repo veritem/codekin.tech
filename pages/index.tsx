@@ -5,7 +5,6 @@ import { getAllPosts } from '@/lib/posts'
 import Link from 'next/link'
 import { NextPage } from 'next'
 import { getLastUpdateDate } from '@/lib/getLastUpdateDate'
-import matter from 'gray-matter'
 import orderby from 'lodash.orderby'
 
 type Post = {
@@ -86,7 +85,14 @@ Home.defaultProps = {
 }
 
 export const getStaticProps = async () => {
-    const posts = orderby(getAllPosts(), ['publishedOn'], ['desc'])
+    const postsArray = getAllPosts()
+
+    const posts = orderby(
+        [...getAllPosts()].map((content) => content),
+        ['publishedOn'],
+        ['desc']
+    )
+
     return {
         props: {
             posts
