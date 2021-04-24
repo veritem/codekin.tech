@@ -17,7 +17,7 @@
     "@tailwindcss/typography": "^0.4.0",
     "@types/gtag.js": "^0.0.4",
     "autoprefixer": "^10.2.5",
-    "gray-matter": "^4.0.2",
+    "gray-matter": "4.0.3",
     "lodash.orderby": "^4.6.0",
     "mdx-prism": "^0.3.3",
     "next": "10.0.8",
