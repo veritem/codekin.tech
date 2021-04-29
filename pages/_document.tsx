@@ -1,5 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { GA_TRACKING_ID } from '@/lib/gtag'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
           `
                         }}></script>
                 </Head>
-                <body className=" dark:bg-black dark:text-black">
+                <body className="bg-white text-white dark:bg-black dark:text-black">
                     <Main />
                     <NextScript />
                 </body>

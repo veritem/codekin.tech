@@ -1,6 +1,6 @@
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 //TODO: Fix the Navbar
 export default function Nav(): React.ReactElement {
@@ -11,15 +11,13 @@ export default function Nav(): React.ReactElement {
     useEffect(() => setMounted(true), [])
 
     return (
-        <nav className="sticky-nav inset-x-0 top-0 w-full h-16  z-40 flex  bg-opacity-80 justify-around items-center pt-2 pb-2">
-            <div>
-                <Link href="/">
-                    <a className=" dark:text-white font-display capitalize font-bold text-xl">
-                        codekin.tech
-                    </a>
-                </Link>
-            </div>
-            <div className=" flex justify-between gap-10 items-center">
+        <nav className="fixed pl-20 bg-white top-0 z-10 w-full py-2 bg-white border-b border-gray-400 dark:border-opacity-10 border-opacity-20 md:bg-opacity-70 dark:bg-primary dark:bg-opacity-40 filter-blur">
+            <Link href="/">
+                <a className="pl-8 md:pl-80 sm:pl-8 text-gray-900 dark:text-white font-display  font-bold text-xl">
+                    codekin.tech
+                </a>
+            </Link>
+            {/* <div className=" flex justify-between gap-10 items-center">
                 {mounted && (
                     <button
                         aria-label="Left Align"
@@ -50,7 +48,7 @@ export default function Nav(): React.ReactElement {
                         </svg>
                     </button>
                 )}
-            </div>
+            </div> */}
         </nav>
     )
 }

@@ -27,9 +27,9 @@ export const Home: NextPage<Props> = ({ posts }) => {
                 <title>codeKin</title>
             </Head>
             <Container>
-                <div className="mt-12">
+                <div className="mt-20">
                     {posts.length >= 1 && (
-                        <h2 className="text-3xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-16">
+                        <h2 className="text-2xl leading-9 font-display font-extrabold text-gray-900 tracking-tight dark:text-white mb-8">
                             Recent posts
                         </h2>
                     )}

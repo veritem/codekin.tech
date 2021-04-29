@@ -6,8 +6,12 @@ module.exports = {
         './pages/**/*.{js,ts,jsx,tsx}',
         './layouts/*.**{js,ts,jsx,tsx}'
     ],
-    darkMode: 'class', // or 'media' or 'class'
+    darkMode: 'media', // or 'media' or 'class'
     theme: {
+        backgroundColor: (theme) => ({
+            ...theme('colors'),
+            primary: '#050508'
+        }),
         extend: {
             colors: {
                 'blue-opaque': 'rgb(13 42 148 / 18%)'

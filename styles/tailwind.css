@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&display=swap');
 
 ::selection {
     background-color: #47a3f3;
@@ -12,7 +10,6 @@
 }
 
 html {
-    /* min-width: 360px; */
     scroll-behavior: smooth;
 }
 
@@ -20,14 +17,6 @@ html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.sticky-nav {
-    position: sticky;
-    z-index: 10;
-    top: 0;
-    backdrop-filter: saturate(180%) blur(100px);
-    transition: background-color 0.1 ease-in-out;
 }
 
 .prose pre {
