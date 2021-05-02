@@ -1,10 +1,10 @@
 import BlogSeo from '@/components/BlogSeo'
-import { PostHeading } from 'types/PostHeading'
-import IndexLayout from './index'
+import Footer from '@/components/Footer'
 import Image from 'next/image'
 import Link from 'next/link'
+import { PostHeading } from 'types/PostHeading'
 import formatDate from '../lib/formatDate'
-import Footer from '@/components/Footer'
+import IndexLayout from './index'
 
 interface BlogLayoutProps {
     frontMatter: PostHeading

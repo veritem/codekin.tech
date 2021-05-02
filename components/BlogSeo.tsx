@@ -1,4 +1,4 @@
-import { NextSeo, ArticleJsonLd } from 'next-seo'
+import { NextSeo } from 'next-seo'
 import { PostHeading } from 'types/PostHeading'
 
 export const BlogSeo: React.FC<PostHeading> = ({
@@ -31,7 +31,7 @@ export const BlogSeo: React.FC<PostHeading> = ({
                     {
                         url: `http://codekin.tech/${image}`,
                         width: 800,
-                        height: 600,
+                        height: 800,
                         alt: 'Image'
                     }
                 ],

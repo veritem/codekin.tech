@@ -1,6 +1,6 @@
+import Container from '@/layouts/index'
 import Head from 'next/head'
 import Link from 'next/link'
-import Container from '@/layouts/index'
 
 export default function NotFound() {
     return (
