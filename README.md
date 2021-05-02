@@ -1,15 +1,13 @@
 # codekin
+
 [![CI](https://github.com/makuzaverite/codekin.tech/actions/workflows/ci.yml/badge.svg)](https://github.com/makuzaverite/codekin.tech/actions/workflows/ci.yml)
 [![Tests](https://github.com/makuzaverite/codekin.tech/actions/workflows/test.yml/badge.svg)](https://github.com/makuzaverite/codekin.tech/actions/workflows/test.yml)
 
-
 > [CodeKin](https://codekin.tech)
-
-
 
 ## Maintainers
 
-- [@makuzaverite](github.com/makuzaverite)
+-   [@makuzaverite](github.com/makuzaverite)
 
 ## Licence
 

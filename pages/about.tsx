@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Container from '@/layouts/index'
 import { NextSeo } from 'next-seo'
 

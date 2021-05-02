@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
 import Container from '@/layouts/index'
-import Head from 'next/head'
-import { getAllPosts } from '@/lib/posts'
-import Link from 'next/link'
-import { NextPage } from 'next'
 import { getLastUpdateDate } from '@/lib/getLastUpdateDate'
+import { getAllPosts } from '@/lib/posts'
 import orderby from 'lodash.orderby'
+import { NextPage } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
+import React, { Fragment } from 'react'
 
 type Post = {
     title: string
@@ -14,6 +14,7 @@ type Post = {
     summary: string
     slug: string
     url: string
+    isPublished: boolean
 }
 
 interface Props {
@@ -35,45 +36,26 @@ export const Home: NextPage<Props> = ({ posts }) => {
                     )}
 
                     <div>
-                        {posts.map((post, index) => (
-                            <div key={`${post.slug}-${index}`} className="py-2 mb-6">
-                                <Link href={`/${post.slug}`}>
-                                    <a className=" font-display text-blue-600  text-xl dark:text-blue-500">
-                                        {post.title}
-                                    </a>
-                                </Link>
-                                <p className="mt-3 text-base text-gray-800 mb-2  font-helper dark:text-white">
-                                    {post.summary}
-                                </p>
-                                <p className="text-gray-400 text-sm">
-                                    last updated {getLastUpdateDate(post.publishedOn)}
-                                </p>
-                            </div>
-                        ))}
+                        {posts.map((post, index) => {
+                            if (post.isPublished) {
+                                return (
+                                    <div key={`${post.slug}-${index}`} className="py-2 mb-6">
+                                        <Link href={`/${post.slug}`}>
+                                            <a className=" font-display text-blue-600  text-xl dark:text-blue-500">
+                                                {post.title}
+                                            </a>
+                                        </Link>
+                                        <p className="mt-3 text-base text-gray-800 mb-2  font-helper dark:text-white">
+                                            {post.summary}
+                                        </p>
+                                        <p className="text-gray-400 text-sm">
+                                            last updated {getLastUpdateDate(post.publishedOn)}
+                                        </p>
+                                    </div>
+                                )
+                            }
+                        })}
                     </div>
-
-                    {/* {posts.length == 0 && (
-                        <div>
-                            <div className="font-black text-white text-center md:text-9xl sm:text-6xl">
-                                <span className="bg-gradient-to-r text-transparent font-display bg-clip-text from-purple-400 to-pink-500">
-                                    Welcome to my Blog
-                                </span>
-                            </div>
-                            <p className=" text-center md:text-2xl sm:text-xl dark:text-white font-helper mt-10">
-                                Comming soon
-                            </p>
-                            <p className="text-center md:text-base sm:text-sm dark:text-white font-helper mt-36">
-                                Made with{' '}
-                                <span role="img" aria-labelledby="love">
-                                    ❤️
-                                </span>{' '}
-                                by{'  '}
-                                <Link href="https://twitter.com/makuza_mugabo_v">
-                                    <a className=" text-blue-500">Makuza Mugabo Verite</a>
-                                </Link>
-                            </p>
-                        </div>
-                    )} */}
                 </div>
             </Container>
         </Fragment>

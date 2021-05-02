@@ -1,10 +1,10 @@
-import React from 'react'
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { getAllSlugs, getPostBySlug } from '@/lib/posts'
-import BlogLayout from '@/layouts/BlogLayout'
-import { PostHeading } from 'types/PostHeading'
-import hydrate from 'next-mdx-remote/hydrate'
 import MdxComponent from '@/components/MdxComponent'
+import BlogLayout from '@/layouts/BlogLayout'
+import { getAllSlugs, getPostBySlug } from '@/lib/posts'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import hydrate from 'next-mdx-remote/hydrate'
+import React from 'react'
+import { PostHeading } from 'types/PostHeading'
 
 interface SlugProps {
     source: string
