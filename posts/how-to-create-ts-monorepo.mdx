@@ -13,8 +13,45 @@ isPublished: false
 
 #### What is a MonoRepo
 
-A monorepo means all of the code source files are stored inside a single repository. let's take a simple example.
+The term "monorepo" refers to a version controlled repository that contains many other projects. [Google](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext), has anounced to be storing all of their code-base into a single reposity which is approximately 80Ts of storage, Microsoft, facebook and twitter announced to be using monorepo for their internal code but they are also other which announced have never used monorepos including apple, ubur and many others.
+
+
+#### The following are some of the reasons why you would like to use monorepo.
+
+1. Everyone will see everyone else's code, resulting in higher quality code for your orgnization.
+2. Since they have the same source of truth, continuous integration and delivery can be easily automated easily.
+3. Monorepo allows you to reuse the same logic through several projects within the same code base.
+4. Since everybody is inverted in keeping up with chacked, using monorepo will help you and your organization have timeline realase.
+5. etc...
+
+With that said, monorepos have a few disadvantages that I'll go over here to help you decide when to use them and when not to.
+
+
+#### Reasons why monorepo might not be appropriate.
+
+
+1. Persomance on  large monorepo is really touch problem
+2. The scalability of VCS can be very difficult; imagine running git status in an 80Tbs repository and seeing how long it would take.
+3. If the designs are interdependent, the learning curve will be difficult for new developers.
+4. etc..
+
+There is a good read about monorepo [here](https://github.com/korfuri/awesome-monorepo) if you want to continue reading about it.
+
+
+### Let's setup a TypeScript monorepo
+
+In order to achieve this we are going to use the following tools
+
+- [Yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/)
+- [lerna](https://github.com/lerna/lerna)
+
+
+What are we going to build
 
 
 
-why google stores their code base inside on (repo)[https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext]
+To lern futher I would like to point out really good open source projects that you can take a look at and learn from how they manage their workflows
+
+1. [Next.js](https://github.com/vercel/next.js)
+2. [Angular](https://github.com/angular/angular)
+3. [vitejs](https://github.com/vitejs/vite)
