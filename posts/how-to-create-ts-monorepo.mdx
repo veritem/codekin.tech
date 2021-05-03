@@ -43,10 +43,219 @@ There is a good read about monorepo [here](https://github.com/korfuri/awesome-mo
 In order to achieve this we are going to use the following tools
 
 - [Yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/)
+
+   We use yarn workspaces to reduce the reputations becouse in monorepo we are dealing with many packages so it can be difficult to manage them indipandently.
+
 - [lerna](https://github.com/lerna/lerna)
 
+  Lerna is a tool that optimizes the workflow around managing multi-package repositories with git and npm.
 
-What are we going to build
+
+- [scripty](https://www.npmjs.com/package/scripty)
+
+  This simplifies script management within our rapidly expanding monorepo.
+
+In this post we are going to create a monorepo which will have three packages two of which depends on each and others which doesn't.
+
+
+ #### setup
+
+Initialize `package.json` with
+
+ ```bash
+ npm init -y
+ ```
+
+ add the follwoing code to `package.json` to initlize the workspace
+
+```bash
+
+ mkdir packages
+ mkdir scripts
+
+ # To handle all scripts
+
+ mkdir scripts/workspace
+ mkdir scripts/packages
+
+
+
+# our packages
+
+ mkdir packages/calculations
+ mkdir packages/utils
+ mkdir packages/server
+```
+
+```bash
+ yarn add --dev scripty
+```
+
+
+```js
+{
+   "private": true,
+   "workspaces": [
+        "packages/**"
+   ],
+   "scripty": {
+    "path": "./scripts/workspace"
+  }
+}
+```
+
+Inside the root of your project run
+
+
+```bash
+npx lerna init
+```
+
+Our folder structure should look like this as of now
+
+```bash
+
+ts-monorepo
+|___ packages
+        |___ calculations
+        |___ server
+        |___ utils
+|___ scripts
+        |___ packages
+        |___ workspace
+|--- lern.json
+|___ package.json
+```
+
+
+
+Let's add eslint for linting
+
+```bash
+ npx eslint --init
+```
+
+
+Make sure to that you select options like this
+
+![eslint_optimizes](/images/posts/eslint-ts-options.PNG)
+
+
+Run lets add scripts to manage our packages
+
+Inside your `package.json` under scripts add the following
+
+```json
+"scripts": {
+    "build": "scrippy",
+    "dev": "scrippy",
+    "lint": "scrippy",
+    "start": "scrippy"
+  }
+```
+
+Add the follwoing scripts directory
+
+
+```bash
+// scripts/workspace/build.sh
+
+#!/usr/bin/env bash
+echo " 📦 Building Workspace "
+yarn tsc -b packages
+
+```
+
+```bash
+
+//scripts/workspace/start.sh
+
+#!/usr/bin/env bash
+echo " 🧹 Starting server "
+
+```
+
+
+```bash
+//scripts/workspace/lint.sh
+
+#!/usr/bin/env bash
+echo " 🕵️‍♀️ LINT: eslint src --ext ts,js,tsx,jsx "
+yarn lerna run lint --stream --concurrency 4
+```
+
+
+Add the follwoing scripts packages directory
+
+
+```bash
+//scripts/packages/build.sh
+
+
+#!/usr/bin/env bash
+echo "Building $(pwd) "
+yarn tsc -b
+
+```
+
+
+```bash
+//scripts/packages/lint.sh
+
+
+#!/usr/bin/env bash
+echo " 🕵️‍♀️ LINT: eslint src --ext ts,js,tsx,jsx "
+yarn eslint src --ext ts,js,tsx,jsx
+
+```
+
+Now that you have all scripts setup let's also setup our packages
+
+
+let's start from the `server` inside `packages/server` run
+
+Inside `utils`
+
+
+Inside `calculations` add the following
+
+
+
+```bash
+ npm init -y
+```
+
+Inside `package.json` add the follwoing
+
+```bash
+  "main": "dist/index.js",
+   "scripts": {
+    "build": "scripty",
+    "lint": "scripty"
+  },
+  "scripty": {
+    "path": "../../scripts/packages"
+  },
+```
+
+
+```typeScript
+//packages/calculations/add.ts
+
+function sum(num1:number,num2:number):number{
+    return num1+num2
+}
+```
+
+
+```typeScript
+//packages/calculations/product.ts
+
+function multiply(num1:number,num2:number):number{
+    return num1*num2
+}
+```
+
 
 
 
