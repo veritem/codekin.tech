@@ -49,7 +49,7 @@ specifiers:
   remark-slug: ^6.0.0
   remark-stringify: ^9.0.1
   stylelint: ^13.12.0
-  stylelint-config-recommended: ^4.0.0
+  stylelint-config-recommended: ^5.0.0
   stylelint-config-standard: ^21.0.0
   tailwindcss: ^2.0.4
   typescript: ^4.2.3
@@ -75,7 +75,7 @@ dependencies:
   remark-autolink-headings: 6.0.1
   remark-code-titles: 0.1.1
   remark-slug: 6.0.0
-  stylelint-config-recommended: 4.0.0_stylelint@13.13.0
+  stylelint-config-recommended: 5.0.0_stylelint@13.13.0
   tailwindcss: 2.1.2_d887a42ede92218908fd5c3cc0b71177
 
 devDependencies:
@@ -8024,6 +8024,15 @@ packages:
       stylelint: ^13.12.0
     dependencies:
       stylelint: 13.13.0
+    dev: true
+
+  /stylelint-config-recommended/5.0.0_stylelint@13.13.0:
+    resolution: {integrity: sha512-c8aubuARSu5A3vEHLBeOSJt1udOdS+1iue7BmJDTSXoCBmfEQmmWX+59vYIj3NQdJBY6a/QRv1ozVFpaB9jaqA==}
+    peerDependencies:
+      stylelint: ^13.13.0
+    dependencies:
+      stylelint: 13.13.0
+    dev: false
 
   /stylelint-config-standard/21.0.0_stylelint@13.13.0:
     resolution: {integrity: sha512-Yf6mx5oYEbQQJxWuW7X3t1gcxqbUx52qC9SMS3saC2ruOVYEyqmr5zSW6k3wXflDjjFrPhar3kp68ugRopmlzg==}
