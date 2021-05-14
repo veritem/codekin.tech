@@ -6,7 +6,7 @@ specifiers:
   '@mdx-js/react': 1.6.22
   '@tailwindcss/jit': 0.1.18
   '@tailwindcss/typography': 0.4.0
-  '@testing-library/dom': 7.30.4
+  '@testing-library/dom': 7.31.0
   '@testing-library/jest-dom': 5.12.0
   '@testing-library/react': 11.2.6
   '@testing-library/user-event': 13.1.9
@@ -80,10 +80,10 @@ dependencies:
 
 devDependencies:
   '@tailwindcss/jit': 0.1.18_postcss@8.2.15+tailwindcss@2.1.2
-  '@testing-library/dom': 7.30.4
+  '@testing-library/dom': 7.31.0
   '@testing-library/jest-dom': 5.12.0
   '@testing-library/react': 11.2.6_react-dom@17.0.2+react@17.0.2
-  '@testing-library/user-event': 13.1.9_@testing-library+dom@7.30.4
+  '@testing-library/user-event': 13.1.9_@testing-library+dom@7.31.0
   '@types/jest': 26.0.23
   '@types/node': 15.0.3
   '@types/react': 17.0.5
@@ -1824,6 +1824,20 @@ packages:
       pretty-format: 26.6.2
     dev: true
 
+  /@testing-library/dom/7.31.0:
+    resolution: {integrity: sha512-0X7ACg4YvTRDFMIuTOEj6B4NpN7i3F/4j5igOcTI5NC5J+N4TribNdErCHOZF1LBWhhcyfwxelVwvoYNMUXTOA==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@babel/code-frame': 7.12.13
+      '@babel/runtime': 7.13.17
+      '@types/aria-query': 4.2.1
+      aria-query: 4.2.2
+      chalk: 4.1.1
+      dom-accessibility-api: 0.5.4
+      lz-string: 1.4.4
+      pretty-format: 26.6.2
+    dev: true
+
   /@testing-library/jest-dom/5.12.0:
     resolution: {integrity: sha512-N9Y82b2Z3j6wzIoAqajlKVF1Zt7sOH0pPee0sUHXHc5cv2Fdn23r+vpWm0MBBoGJtPOly5+Bdx1lnc3CD+A+ow==}
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
@@ -1851,14 +1865,14 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: true
 
-  /@testing-library/user-event/13.1.9_@testing-library+dom@7.30.4:
+  /@testing-library/user-event/13.1.9_@testing-library+dom@7.31.0:
     resolution: {integrity: sha512-NZr0zL2TMOs2qk+dNlqrAdbaRW5dAmYwd1yuQ4r7HpkVEOj0MWuUjDWwKhcLd/atdBy8ZSMHSKp+kXSQe47ezg==}
     engines: {node: '>=10', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
       '@babel/runtime': 7.13.17
-      '@testing-library/dom': 7.30.4
+      '@testing-library/dom': 7.31.0
     dev: true
 
   /@types/aria-query/4.2.1:
