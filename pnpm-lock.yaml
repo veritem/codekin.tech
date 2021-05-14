@@ -8,7 +8,7 @@ specifiers:
   '@tailwindcss/typography': 0.4.0
   '@testing-library/dom': 7.31.0
   '@testing-library/jest-dom': 5.12.0
-  '@testing-library/react': 11.2.6
+  '@testing-library/react': 11.2.7
   '@testing-library/user-event': 13.1.9
   '@types/gtag.js': 0.0.4
   '@types/jest': 26.0.23
@@ -82,7 +82,7 @@ devDependencies:
   '@tailwindcss/jit': 0.1.18_postcss@8.2.15+tailwindcss@2.1.2
   '@testing-library/dom': 7.31.0
   '@testing-library/jest-dom': 5.12.0
-  '@testing-library/react': 11.2.6_react-dom@17.0.2+react@17.0.2
+  '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.1.9_@testing-library+dom@7.31.0
   '@types/jest': 26.0.23
   '@types/node': 15.0.3
@@ -1810,20 +1810,6 @@ packages:
       tailwindcss: 2.1.2_797cfc3ceddb49f111b184f6879a433f
     dev: false
 
-  /@testing-library/dom/7.30.4:
-    resolution: {integrity: sha512-GObDVMaI4ARrZEXaRy4moolNAxWPKvEYNV/fa6Uc2eAzR/t4otS6A7EhrntPBIQLeehL9DbVhscvvv7gd6hWqA==}
-    engines: {node: '>=10'}
-    dependencies:
-      '@babel/code-frame': 7.12.13
-      '@babel/runtime': 7.13.17
-      '@types/aria-query': 4.2.1
-      aria-query: 4.2.2
-      chalk: 4.1.1
-      dom-accessibility-api: 0.5.4
-      lz-string: 1.4.4
-      pretty-format: 26.6.2
-    dev: true
-
   /@testing-library/dom/7.31.0:
     resolution: {integrity: sha512-0X7ACg4YvTRDFMIuTOEj6B4NpN7i3F/4j5igOcTI5NC5J+N4TribNdErCHOZF1LBWhhcyfwxelVwvoYNMUXTOA==}
     engines: {node: '>=10'}
@@ -1852,15 +1838,15 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react/11.2.6_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-TXMCg0jT8xmuU8BkKMtp8l7Z50Ykew5WNX8UoIKTaLFwKkP2+1YDhOLA2Ga3wY4x29jyntk7EWfum0kjlYiSjQ==}
+  /@testing-library/react/11.2.7_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-tzRNp7pzd5QmbtXNG/mhdcl7Awfu/Iz1RaVHY75zTdOkmHCuzMhRL83gWHSgOAcjS3CCbyfwUHMZgRJb4kAfpA==}
     engines: {node: '>=10'}
     peerDependencies:
       react: '*'
       react-dom: '*'
     dependencies:
       '@babel/runtime': 7.13.17
-      '@testing-library/dom': 7.30.4
+      '@testing-library/dom': 7.31.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     dev: true
