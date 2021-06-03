@@ -7,7 +7,7 @@ specifiers:
   '@tailwindcss/jit': 0.1.18
   '@tailwindcss/typography': 0.4.0
   '@testing-library/dom': 7.31.0
-  '@testing-library/jest-dom': 5.12.0
+  '@testing-library/jest-dom': 5.13.0
   '@testing-library/react': 11.2.7
   '@testing-library/user-event': 13.1.9
   '@types/gtag.js': 0.0.4
@@ -81,7 +81,7 @@ dependencies:
 devDependencies:
   '@tailwindcss/jit': 0.1.18_postcss@8.2.15+tailwindcss@2.1.2
   '@testing-library/dom': 7.31.0
-  '@testing-library/jest-dom': 5.12.0
+  '@testing-library/jest-dom': 5.13.0
   '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.1.9_@testing-library+dom@7.31.0
   '@types/jest': 26.0.23
@@ -1824,8 +1824,8 @@ packages:
       pretty-format: 26.6.2
     dev: true
 
-  /@testing-library/jest-dom/5.12.0:
-    resolution: {integrity: sha512-N9Y82b2Z3j6wzIoAqajlKVF1Zt7sOH0pPee0sUHXHc5cv2Fdn23r+vpWm0MBBoGJtPOly5+Bdx1lnc3CD+A+ow==}
+  /@testing-library/jest-dom/5.13.0:
+    resolution: {integrity: sha512-+jXXTn8GjRnZkJfzG/tqK/2Q7dGlBInR412WE7Aml7CT3wdSpx5dMQC0HOwVQoZ3cNTmQUy8fCVGUV/Zhoyvcw==}
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
     dependencies:
       '@babel/runtime': 7.13.17
