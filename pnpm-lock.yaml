@@ -6,11 +6,11 @@ specifiers:
   '@mdx-js/react': 1.6.22
   '@tailwindcss/jit': 0.1.18
   '@tailwindcss/typography': 0.4.0
-  '@testing-library/dom': 7.31.0
+  '@testing-library/dom': 7.31.2
   '@testing-library/jest-dom': 5.13.0
   '@testing-library/react': 11.2.7
   '@testing-library/user-event': 13.1.9
-  '@types/gtag.js': 0.0.4
+  '@types/gtag.js': 0.0.5
   '@types/jest': 26.0.23
   '@types/node': 15.3.0
   '@types/react': 17.0.5
@@ -59,7 +59,7 @@ dependencies:
   '@mdx-js/loader': 1.6.22_react@17.0.2
   '@mdx-js/react': 1.6.22_react@17.0.2
   '@tailwindcss/typography': 0.4.0_tailwindcss@2.1.4
-  '@types/gtag.js': 0.0.4
+  '@types/gtag.js': 0.0.5
   autoprefixer: 10.2.5_postcss@8.2.15
   gray-matter: 4.0.3
   lodash.orderby: 4.6.0
@@ -80,10 +80,10 @@ dependencies:
 
 devDependencies:
   '@tailwindcss/jit': 0.1.18_postcss@8.2.15+tailwindcss@2.1.4
-  '@testing-library/dom': 7.31.0
+  '@testing-library/dom': 7.31.2
   '@testing-library/jest-dom': 5.13.0
   '@testing-library/react': 11.2.7_react-dom@17.0.2+react@17.0.2
-  '@testing-library/user-event': 13.1.9_@testing-library+dom@7.31.0
+  '@testing-library/user-event': 13.1.9_@testing-library+dom@7.31.2
   '@types/jest': 26.0.23
   '@types/node': 15.3.0
   '@types/react': 17.0.5
@@ -1824,6 +1824,20 @@ packages:
       pretty-format: 26.6.2
     dev: true
 
+  /@testing-library/dom/7.31.2:
+    resolution: {integrity: sha512-3UqjCpey6HiTZT92vODYLPxTBWlM8ZOOjr3LX5F37/VRipW2M1kX6I/Cm4VXzteZqfGfagg8yXywpcOgQBlNsQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@babel/code-frame': 7.12.13
+      '@babel/runtime': 7.13.17
+      '@types/aria-query': 4.2.1
+      aria-query: 4.2.2
+      chalk: 4.1.1
+      dom-accessibility-api: 0.5.6
+      lz-string: 1.4.4
+      pretty-format: 26.6.2
+    dev: true
+
   /@testing-library/jest-dom/5.13.0:
     resolution: {integrity: sha512-+jXXTn8GjRnZkJfzG/tqK/2Q7dGlBInR412WE7Aml7CT3wdSpx5dMQC0HOwVQoZ3cNTmQUy8fCVGUV/Zhoyvcw==}
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
@@ -1851,14 +1865,14 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: true
 
-  /@testing-library/user-event/13.1.9_@testing-library+dom@7.31.0:
+  /@testing-library/user-event/13.1.9_@testing-library+dom@7.31.2:
     resolution: {integrity: sha512-NZr0zL2TMOs2qk+dNlqrAdbaRW5dAmYwd1yuQ4r7HpkVEOj0MWuUjDWwKhcLd/atdBy8ZSMHSKp+kXSQe47ezg==}
     engines: {node: '>=10', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
       '@babel/runtime': 7.13.17
-      '@testing-library/dom': 7.31.0
+      '@testing-library/dom': 7.31.2
     dev: true
 
   /@types/aria-query/4.2.1:
@@ -1900,8 +1914,8 @@ packages:
       '@types/node': 15.0.2
     dev: true
 
-  /@types/gtag.js/0.0.4:
-    resolution: {integrity: sha512-rn4yaEfryXklAtsiai4xHNUgLjGD8AEPQBNSCTa5QrvccFYYBWJQRGwaHiv2U/wdIzcjOuyyBC23YgdQfq5u/Q==}
+  /@types/gtag.js/0.0.5:
+    resolution: {integrity: sha512-M9r87Q4gg/i4bJF/i2VGqP6nAoaGEgXRoNaOtaUsCT+yUo75upVRXOYU6oa8+U+JXgrC/TEE8X02zkjo49buHQ==}
     dev: false
 
   /@types/hast/2.3.1:
@@ -3453,6 +3467,10 @@ packages:
 
   /dom-accessibility-api/0.5.4:
     resolution: {integrity: sha512-TvrjBckDy2c6v6RLxPv5QXOnU+SmF9nBII5621Ve5fu6Z/BDrENurBEvlC1f44lKEUVqOpK4w9E5Idc5/EgkLQ==}
+    dev: true
+
+  /dom-accessibility-api/0.5.6:
+    resolution: {integrity: sha512-DplGLZd8L1lN64jlT27N9TVSESFR5STaEJvX+thCby7fuCHonfPpAlodYc3vuUYbDuDec5w8AMP7oCM5TWFsqw==}
     dev: true
 
   /dom-serializer/0.2.2:
