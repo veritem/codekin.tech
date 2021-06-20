@@ -33,7 +33,7 @@ specifiers:
   mdx-prism: 0.3.3
   next: 10.2.3
   next-mdx-remote: 2.1.4
-  next-seo: 4.24.0
+  next-seo: 4.26.0
   next-themes: 0.0.14
   postcss: 8.3.5
   prettier: 2.3.1
@@ -66,7 +66,7 @@ dependencies:
   mdx-prism: 0.3.3
   next: 10.2.3_2dbe935e140170ce01c975771f1adcbd
   next-mdx-remote: 2.1.4_react-dom@17.0.2+react@17.0.2
-  next-seo: 4.24.0_cdb07c42721266739ffbd3ea8e818efe
+  next-seo: 4.26.0_cdb07c42721266739ffbd3ea8e818efe
   next-themes: 0.0.14_cdb07c42721266739ffbd3ea8e818efe
   postcss: 8.3.5
   react: 17.0.2
@@ -6229,12 +6229,12 @@ packages:
       - supports-color
     dev: false
 
-  /next-seo/4.24.0_cdb07c42721266739ffbd3ea8e818efe:
-    resolution: {integrity: sha512-9VQXfXAelhE+hAWzJ4azigQaW3FPX0kU0eYKFQXKsQjgY7AWtukjRGXls0oSIk8khhDJwmCt46EwsO9n5DDW6Q==}
+  /next-seo/4.26.0_cdb07c42721266739ffbd3ea8e818efe:
+    resolution: {integrity: sha512-5TqywQ3XAwqdmEU1AyNZjR7WdDKFTkDD8aBtgQelPvzBUEy8i0mTjtiw+09jhiHFNik6FqS8uPKCaYcY6jRgSQ==}
     peerDependencies:
-      next: ^8.1.1-canary.54 || ^9.0.0 || ^10.0.0
-      react: ^16.0.0 || ^17.0.0
-      react-dom: ^16.0.0 || ^17.0.0
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
     dependencies:
       next: 10.2.3_2dbe935e140170ce01c975771f1adcbd
       react: 17.0.2
