@@ -5,7 +5,7 @@ specifiers:
   '@mdx-js/loader': 1.6.22
   '@mdx-js/react': 1.6.22
   '@tailwindcss/jit': 0.1.18
-  '@tailwindcss/typography': 0.4.0
+  '@tailwindcss/typography': 0.4.1
   '@testing-library/dom': 7.31.2
   '@testing-library/jest-dom': 5.13.0
   '@testing-library/react': 11.2.7
@@ -58,7 +58,7 @@ dependencies:
   '@mapbox/rehype-prism': 0.6.0
   '@mdx-js/loader': 1.6.22_react@17.0.2
   '@mdx-js/react': 1.6.22_react@17.0.2
-  '@tailwindcss/typography': 0.4.0_tailwindcss@2.1.4
+  '@tailwindcss/typography': 0.4.1_tailwindcss@2.1.4
   '@types/gtag.js': 0.0.5
   autoprefixer: 10.2.6_postcss@8.3.5
   gray-matter: 4.0.3
@@ -1798,10 +1798,10 @@ packages:
       tailwindcss: 2.1.4_72be89de93206f86f2d67dd5290ec14d
     dev: true
 
-  /@tailwindcss/typography/0.4.0_tailwindcss@2.1.4:
-    resolution: {integrity: sha512-3BfOYT5MYNEq81Ism3L2qu/HRP2Q5vWqZtZRQqQrthHuaTK9qpuPfbMT5WATjAM5J1OePKBaI5pLoX4S1JGNMQ==}
+  /@tailwindcss/typography/0.4.1_tailwindcss@2.1.4:
+    resolution: {integrity: sha512-ovPPLUhs7zAIJfr0y1dbGlyCuPhpuv/jpBoFgqAc658DWGGrOBWBMpAWLw2KlzbNeVk4YBJMzue1ekvIbdw6XA==}
     peerDependencies:
-      tailwindcss: 2.0.0-alpha.24 || ^2.0.0
+      tailwindcss: '>=2.0.0'
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
