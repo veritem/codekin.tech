@@ -13,7 +13,7 @@ specifiers:
   '@types/gtag.js': 0.0.6
   '@types/jest': 26.0.23
   '@types/node': 15.3.0
-  '@types/react': 17.0.5
+  '@types/react': 17.0.11
   '@typescript-eslint/eslint-plugin': 4.27.0
   '@typescript-eslint/parser': 4.27.0
   autoprefixer: 10.2.6
@@ -86,7 +86,7 @@ devDependencies:
   '@testing-library/user-event': 13.1.9_@testing-library+dom@7.31.2
   '@types/jest': 26.0.23
   '@types/node': 15.3.0
-  '@types/react': 17.0.5
+  '@types/react': 17.0.11
   '@typescript-eslint/eslint-plugin': 4.27.0_f5ada5c73d5b193bb502939ec9d02acd
   '@typescript-eslint/parser': 4.27.0_eslint@7.26.0+typescript@4.3.4
   babel-jest: 27.0.5
@@ -1995,8 +1995,8 @@ packages:
     resolution: {integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==}
     dev: true
 
-  /@types/react/17.0.5:
-    resolution: {integrity: sha512-bj4biDB9ZJmGAYTWSKJly6bMr4BLUiBrx9ujiJEoP9XIDY9CTaPGxE5QWN/1WjpPLzYF7/jRNnV2nNxNe970sw==}
+  /@types/react/17.0.11:
+    resolution: {integrity: sha512-yFRQbD+whVonItSk7ZzP/L+gPTJVBkL/7shLEF+i9GC/1cV3JmUxEQz6+9ylhUpWSDuqo1N9qEvqS6vTj4USUA==}
     dependencies:
       '@types/prop-types': 15.7.3
       '@types/scheduler': 0.16.1
