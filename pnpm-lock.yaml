@@ -6,7 +6,7 @@ specifiers:
   '@mdx-js/react': 1.6.22
   '@tailwindcss/jit': 0.1.18
   '@tailwindcss/typography': 0.4.1
-  '@testing-library/dom': 7.31.2
+  '@testing-library/dom': 8.0.0
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0
   '@testing-library/user-event': 13.1.9
@@ -80,10 +80,10 @@ dependencies:
 
 devDependencies:
   '@tailwindcss/jit': 0.1.18_postcss@8.3.5+tailwindcss@2.1.4
-  '@testing-library/dom': 7.31.2
+  '@testing-library/dom': 8.0.0
   '@testing-library/jest-dom': 5.14.1
   '@testing-library/react': 12.0.0_react-dom@17.0.2+react@17.0.2
-  '@testing-library/user-event': 13.1.9_@testing-library+dom@7.31.2
+  '@testing-library/user-event': 13.1.9_@testing-library+dom@8.0.0
   '@types/jest': 26.0.23
   '@types/node': 15.3.0
   '@types/react': 17.0.11
@@ -1815,20 +1815,6 @@ packages:
       tailwindcss: 2.1.4_72be89de93206f86f2d67dd5290ec14d
     dev: false
 
-  /@testing-library/dom/7.31.2:
-    resolution: {integrity: sha512-3UqjCpey6HiTZT92vODYLPxTBWlM8ZOOjr3LX5F37/VRipW2M1kX6I/Cm4VXzteZqfGfagg8yXywpcOgQBlNsQ==}
-    engines: {node: '>=10'}
-    dependencies:
-      '@babel/code-frame': 7.12.13
-      '@babel/runtime': 7.13.17
-      '@types/aria-query': 4.2.1
-      aria-query: 4.2.2
-      chalk: 4.1.1
-      dom-accessibility-api: 0.5.6
-      lz-string: 1.4.4
-      pretty-format: 26.6.2
-    dev: true
-
   /@testing-library/dom/8.0.0:
     resolution: {integrity: sha512-Ym375MTOpfszlagRnTMO+FOfTt6gRrWiDOWmEnWLu9OvwCPOWtK6i5pBHmZ07wUJiQ7wWz0t8+ZBK2wFo2tlew==}
     engines: {node: '>=12'}
@@ -1871,14 +1857,14 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: true
 
-  /@testing-library/user-event/13.1.9_@testing-library+dom@7.31.2:
+  /@testing-library/user-event/13.1.9_@testing-library+dom@8.0.0:
     resolution: {integrity: sha512-NZr0zL2TMOs2qk+dNlqrAdbaRW5dAmYwd1yuQ4r7HpkVEOj0MWuUjDWwKhcLd/atdBy8ZSMHSKp+kXSQe47ezg==}
     engines: {node: '>=10', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
     dependencies:
       '@babel/runtime': 7.13.17
-      '@testing-library/dom': 7.31.2
+      '@testing-library/dom': 8.0.0
     dev: true
 
   /@tootallnate/once/1.1.2:
