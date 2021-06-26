@@ -34,7 +34,7 @@ specifiers:
   next: 10.2.3
   next-mdx-remote: 2.1.4
   next-seo: 4.26.0
-  next-themes: 0.0.14
+  next-themes: 0.0.15
   postcss: 8.3.5
   prettier: 2.3.2
   react: 17.0.2
@@ -67,7 +67,7 @@ dependencies:
   next: 10.2.3_2dbe935e140170ce01c975771f1adcbd
   next-mdx-remote: 2.1.4_react-dom@17.0.2+react@17.0.2
   next-seo: 4.26.0_cdb07c42721266739ffbd3ea8e818efe
-  next-themes: 0.0.14_cdb07c42721266739ffbd3ea8e818efe
+  next-themes: 0.0.15_cdb07c42721266739ffbd3ea8e818efe
   postcss: 8.3.5
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -5757,8 +5757,8 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
-  /next-themes/0.0.14_cdb07c42721266739ffbd3ea8e818efe:
-    resolution: {integrity: sha512-x09OaM+wg3SIlEjOv8B21aw/E36jxTtfW3Dm/DPwMsSMluGt7twe1LigA6nc+mXP1u0qu9MxBaIrPPH6UTiKnA==}
+  /next-themes/0.0.15_cdb07c42721266739ffbd3ea8e818efe:
+    resolution: {integrity: sha512-LTmtqYi03c4gMTJmWwVK9XkHL7h0/+XrtR970Ujvtu3s0kZNeJN24aJsi4rkZOI8i19+qq6f8j+8Duwy5jqcrQ==}
     peerDependencies:
       next: '*'
       react: '*'
