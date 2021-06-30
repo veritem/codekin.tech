@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@mapbox/rehype-prism': 0.6.0
+  '@mapbox/rehype-prism': 0.7.0
   '@mdx-js/loader': 1.6.22
   '@mdx-js/react': 1.6.22
   '@tailwindcss/jit': 0.1.18
@@ -55,7 +55,7 @@ specifiers:
   typescript: 4.3.4
 
 dependencies:
-  '@mapbox/rehype-prism': 0.6.0
+  '@mapbox/rehype-prism': 0.7.0
   '@mdx-js/loader': 1.6.22_react@17.0.2
   '@mdx-js/react': 1.6.22_react@17.0.2
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.1.4
@@ -1627,12 +1627,12 @@ packages:
       chalk: 4.1.1
     dev: true
 
-  /@mapbox/rehype-prism/0.6.0:
-    resolution: {integrity: sha512-/0Ev/PB4fXdKPT6VDzVpnAPxGpWFIc4Yz3mf/DzLEMxlpIPZpZlCzaFk4V4NGFofQXPc41+GpEcZtWP3VuFWVA==}
+  /@mapbox/rehype-prism/0.7.0:
+    resolution: {integrity: sha512-zSG46selA6v+3THhCatTyOt9DuTzxTIVTxTbcj15kFmxPDtjzZ5VoFVCLZfjWFouYa9PiXxcbMLLhJoVzCxh9w==}
     engines: {node: '>=10'}
     dependencies:
       hast-util-to-string: 1.0.4
-      refractor: 3.3.1
+      refractor: 3.4.0
       unist-util-visit: 2.0.3
     dev: false
 
@@ -6435,6 +6435,10 @@ packages:
       clipboard: 2.0.8
     dev: false
 
+  /prismjs/1.24.0:
+    resolution: {integrity: sha512-SqV5GRsNqnzCL8k5dfAjCNhUrF3pR0A9lTDSCUZeh/LIshheXJEaP0hwLz2t4XHivd2J/v2HR+gRnigzeKe3cQ==}
+    dev: false
+
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
     dev: false
@@ -6681,12 +6685,12 @@ packages:
       prismjs: 1.23.0
     dev: false
 
-  /refractor/3.3.1:
-    resolution: {integrity: sha512-vaN6R56kLMuBszHSWlwTpcZ8KTMG6aUCok4GrxYDT20UIOXxOc5o6oDc8tNTzSlH3m2sI+Eu9Jo2kVdDcUTWYw==}
+  /refractor/3.4.0:
+    resolution: {integrity: sha512-dBeD02lC5eytm9Gld2Mx0cMcnR+zhSnsTfPpWqFaMgUMJfC9A6bcN3Br/NaXrnBJcuxnLFR90k1jrkaSyV8umg==}
     dependencies:
       hastscript: 6.0.0
       parse-entities: 2.0.0
-      prismjs: 1.23.0
+      prismjs: 1.24.0
     dev: false
 
   /regenerate-unicode-properties/8.2.0:
