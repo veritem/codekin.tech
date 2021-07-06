@@ -26,7 +26,7 @@ specifiers:
   eslint-plugin-react-hooks: 4.2.0
   eslint-plugin-simple-import-sort: 7.0.0
   gray-matter: 4.0.3
-  husky: 6.0.0
+  husky: 7.0.1
   jest: 27.0.6
   lint-staged: 11.0.0
   lodash.orderby: 4.6.0
@@ -97,7 +97,7 @@ devDependencies:
   eslint-plugin-react: 7.24.0_eslint@7.30.0
   eslint-plugin-react-hooks: 4.2.0_eslint@7.30.0
   eslint-plugin-simple-import-sort: 7.0.0_eslint@7.30.0
-  husky: 6.0.0
+  husky: 7.0.1
   jest: 27.0.6
   lint-staged: 11.0.0
   prettier: 2.3.2
@@ -4342,8 +4342,9 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /husky/6.0.0:
-    resolution: {integrity: sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==}
+  /husky/7.0.1:
+    resolution: {integrity: sha512-gceRaITVZ+cJH9sNHqx5tFwbzlLCVxtVZcusME8JYQ8Edy5mpGDOqD8QBCdMhpyo9a+JXddnujQ4rpY2Ff9SJA==}
+    engines: {node: '>=12'}
     hasBin: true
     dev: true
 
