@@ -1,6 +1,6 @@
 export default {
     title: 'codekin',
-    description: 'Coding Explained',
+    description: 'Programming blog on web development, systems Programming and ML',
     canonical: 'https://codekin.tech',
     openGraph: {
         type: 'website',
