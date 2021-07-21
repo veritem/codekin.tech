@@ -23,8 +23,8 @@ export const getAllPosts = () => {
     return filePosts
 }
 
-export const getPostBySlug = async (slug) => {
-    let source
+export const getPostBySlug = async (slug: any) => {
+    let source: any
 
     try {
         source = fs.readFileSync(path.join(root, 'posts', `${slug}.mdx`), 'utf8')
