@@ -2,7 +2,6 @@ import { GA_TRACKING_ID } from '@/lib/gtag'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     render() {
         return (
             <Html lang="en">
