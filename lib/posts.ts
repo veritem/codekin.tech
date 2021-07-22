@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
@@ -23,7 +22,7 @@ export const getAllPosts = () => {
 }
 
 export const getPostBySlug = async (slug: any) => {
-    let source: any
+    let source: string
 
     try {
         source = fs.readFileSync(path.join(root, `${slug}.mdx`), 'utf8')
@@ -71,8 +70,8 @@ export const getAllSlugs = () => {
     return slugs
 }
 
-function getNextAndPrevious(slug) {
-    const index = getAllSlugs().indexOf((el) => el.slug === slug)
+function getNextAndPrevious(slug: string) {
+    const index = getAllSlugs().indexOf((el: any) => el.slug === slug)
     const prev = getAllSlugs()[index - 1]?.slug || ''
     const next = getAllSlugs()[index + 1]?.slug || ''
     return { prev, next }

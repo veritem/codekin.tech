@@ -3,7 +3,7 @@ import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'
 
-export default (_req: NextApiRequest, res: NextApiResponse) => {
+export default function Handler(_req: NextApiRequest, res: NextApiResponse) {
     const dir = path.resolve('./posts')
 
     const filenames = fs.readdirSync(dir)
