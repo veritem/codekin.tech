@@ -1,22 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-// import { getAllPosts } from '@/lib/posts'
-import path from 'path'
-import fs from 'fs'
-import matter from 'gray-matter'
+import { getAllPosts } from '@/lib/posts'
 
 export default (_req: NextApiRequest, res: NextApiResponse) => {
-    const dir = path.resolve('./posts')
+    const posts = getAllPosts()
 
-    const filenames = fs.readdirSync(dir)
-
-    const posts = filenames.map((name) => {
-        const fullname = path.join(process.cwd(), 'posts', name)
-        const fileContent = fs.readFileSync(fullname)
-        const { data } = matter(fileContent)
-        return data
-    })
-
-    let response = posts.filter((post) => post.isPublished)
+    let response = posts.filter((post) => (post as any).isPublished)
 
     res.status(200).json(response)
 }

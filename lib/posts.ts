@@ -7,13 +7,12 @@ import mdxPrism from 'mdx-prism'
 import readingTime from 'reading-time'
 import MDXComponents from '../components/MdxComponent'
 
-const root = path.join(process.cwd())
+const root = path.resolve('./posts')
 
 export const getAllPosts = () => {
-    const postsPath = path.join(process.cwd(), 'posts')
-    const filenames = fs.readdirSync(postsPath)
+    const filenames = fs.readdirSync(root)
     const filePosts = filenames.map((name) => {
-        const fullPath = path.join(process.cwd(), 'posts', name)
+        const fullPath = path.join(root, name)
         const file = fs.readFileSync(fullPath, 'utf-8')
         const { data, content } = matter(file)
 
@@ -27,7 +26,7 @@ export const getPostBySlug = async (slug: any) => {
     let source: any
 
     try {
-        source = fs.readFileSync(path.join(root, 'posts', `${slug}.mdx`), 'utf8')
+        source = fs.readFileSync(path.join(root, `${slug}.mdx`), 'utf8')
     } catch (error) {
         return {}
     }
@@ -59,11 +58,10 @@ export const getPostBySlug = async (slug: any) => {
 }
 
 export const getAllSlugs = () => {
-    const postsPath = path.join(process.cwd(), 'posts')
-    const filenames = fs.readdirSync(postsPath)
+    const filenames = fs.readdirSync(root)
 
     const slugs = filenames.map((name) => {
-        const filePath = path.join(postsPath, name)
+        const filePath = path.join(root, name)
 
         const file = fs.readFileSync(filePath, 'utf-8')
         const { data } = matter(file)
