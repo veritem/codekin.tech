@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
@@ -7,13 +6,12 @@ import mdxPrism from 'mdx-prism'
 import readingTime from 'reading-time'
 import MDXComponents from '../components/MdxComponent'
 
-const root = path.join(process.cwd())
+const root = path.resolve('./posts')
 
 export const getAllPosts = () => {
-    const postsPath = path.join(process.cwd(), 'posts')
-    const filenames = fs.readdirSync(postsPath)
+    const filenames = fs.readdirSync(root)
     const filePosts = filenames.map((name) => {
-        const fullPath = path.join(process.cwd(), 'posts', name)
+        const fullPath = path.join(root, name)
         const file = fs.readFileSync(fullPath, 'utf-8')
         const { data, content } = matter(file)
 
@@ -24,10 +22,10 @@ export const getAllPosts = () => {
 }
 
 export const getPostBySlug = async (slug: any) => {
-    let source: any
+    let source: string
 
     try {
-        source = fs.readFileSync(path.join(root, 'posts', `${slug}.mdx`), 'utf8')
+        source = fs.readFileSync(path.join(root, `${slug}.mdx`), 'utf8')
     } catch (error) {
         return {}
     }
@@ -59,11 +57,10 @@ export const getPostBySlug = async (slug: any) => {
 }
 
 export const getAllSlugs = () => {
-    const postsPath = path.join(process.cwd(), 'posts')
-    const filenames = fs.readdirSync(postsPath)
+    const filenames = fs.readdirSync(root)
 
     const slugs = filenames.map((name) => {
-        const filePath = path.join(postsPath, name)
+        const filePath = path.join(root, name)
 
         const file = fs.readFileSync(filePath, 'utf-8')
         const { data } = matter(file)
@@ -73,8 +70,8 @@ export const getAllSlugs = () => {
     return slugs
 }
 
-function getNextAndPrevious(slug) {
-    const index = getAllSlugs().indexOf((el) => el.slug === slug)
+function getNextAndPrevious(slug: string) {
+    const index = getAllSlugs().indexOf((el: any) => el.slug === slug)
     const prev = getAllSlugs()[index - 1]?.slug || ''
     const next = getAllSlugs()[index + 1]?.slug || ''
     return { prev, next }
