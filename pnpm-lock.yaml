@@ -17,7 +17,7 @@ specifiers:
   jest: 27.0.6
   lint-staged: 11.0.0
   lodash.orderby: 4.6.0
-  mdx-prism: 0.3.3
+  mdx-prism: 0.3.4
   next: 11.0.1
   next-mdx-remote: 2.1.4
   next-seo: 4.26.0
@@ -40,7 +40,7 @@ dependencies:
   autoprefixer: 10.2.6_postcss@8.3.5
   gray-matter: 4.0.3
   lodash.orderby: 4.6.0
-  mdx-prism: 0.3.3
+  mdx-prism: 0.3.4
   next: 11.0.1_2dbe935e140170ce01c975771f1adcbd
   next-mdx-remote: 2.1.4_react-dom@17.0.2+react@17.0.2
   next-seo: 4.26.0_de3a444b12c9ebc463b1db22b5bac6fe
@@ -5344,13 +5344,16 @@ packages:
     resolution: {integrity: sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=}
     dev: false
 
-  /mdx-prism/0.3.3:
-    resolution: {integrity: sha512-1Q4eIb5lbmZx0NC4pdeJqUy79tEV1tX5X//pjouaoBJfzPelGpMxxd57+dU2TnRYzHsGa4IHTcsA40H2cTFyAg==}
+  /mdx-prism/0.3.4:
+    resolution: {integrity: sha512-Ijy/BB0NINK5Vn6WgOATgX75q6JEdWcGZuXtpePoGiILbjEWFiOkacTdGDpu+VGTrxu0nszlX2Spkf0bhC5O6A==}
     engines: {node: '>=6'}
     dependencies:
       hast-util-to-string: 1.0.4
       parse-numeric-range: 0.0.2
       refractor: 3.3.0
+      rehype: 11.0.0
+      rehype-parse: 7.0.1
+      unified: 9.2.2
       unist-util-visit: 1.4.1
     dev: false
 
