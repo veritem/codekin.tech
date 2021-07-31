@@ -25,7 +25,7 @@ export const Home: NextPage<Props> = ({ posts }) => {
     return (
         <Fragment>
             <Head>
-                <title>codeKin</title>
+                <title>codekin</title>
             </Head>
             <Container>
                 <div className="mt-20">
