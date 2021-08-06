@@ -15,7 +15,7 @@ specifiers:
   gray-matter: 4.0.3
   husky: 7.0.1
   jest: 27.0.6
-  lint-staged: 11.1.1
+  lint-staged: 11.1.2
   lodash.orderby: 4.6.0
   mdx-prism: 0.3.4
   next: 11.0.1
@@ -64,7 +64,7 @@ devDependencies:
   eslint-config-next: 11.0.1_364f6739f1a077bdf2998405af31cd57
   husky: 7.0.1
   jest: 27.0.6
-  lint-staged: 11.1.1
+  lint-staged: 11.1.2
   prettier: 2.3.2
   typescript: 4.3.5
 
@@ -5212,8 +5212,8 @@ packages:
   /lines-and-columns/1.1.6:
     resolution: {integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=}
 
-  /lint-staged/11.1.1:
-    resolution: {integrity: sha512-eTNGe6i78PSUUH2BZi1gZmGmNfb8IeN4z2OzMYxSZ1qnP1WXKn1E7D+OHwLbRDm/wQINnzIj0bsKJ6lLVSuZiQ==}
+  /lint-staged/11.1.2:
+    resolution: {integrity: sha512-6lYpNoA9wGqkL6Hew/4n1H6lRqF3qCsujVT0Oq5Z4hiSAM7S6NksPJ3gnr7A7R52xCtiZMcEUNNQ6d6X5Bvh9w==}
     hasBin: true
     dependencies:
       chalk: 4.1.1
@@ -5221,7 +5221,6 @@ packages:
       commander: 7.2.0
       cosmiconfig: 7.0.0
       debug: 4.3.2
-      dedent: 0.7.0
       enquirer: 2.3.6
       execa: 5.1.1
       listr2: 3.10.0_enquirer@2.3.6
