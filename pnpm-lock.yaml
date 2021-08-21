@@ -8,7 +8,7 @@ specifiers:
   '@types/jest': 27.0.1
   '@types/node': 15.3.0
   '@types/react': 17.0.19
-  autoprefixer: 10.3.1
+  autoprefixer: 10.3.2
   babel-jest: 27.0.6
   eslint: 7.32.0
   eslint-config-next: 11.1.0
@@ -37,7 +37,7 @@ dependencies:
   '@mdx-js/react': 1.6.22_react@17.0.2
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.7
   '@types/gtag.js': 0.0.7
-  autoprefixer: 10.3.1_postcss@8.3.6
+  autoprefixer: 10.3.2_postcss@8.3.6
   gray-matter: 4.0.3
   lodash.orderby: 4.6.0
   mdx-prism: 0.3.4
@@ -52,7 +52,7 @@ dependencies:
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
   remark-slug: 6.1.0
-  tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
+  tailwindcss: 2.2.7_8b238584a104f535cc123d61e89214a6
 
 devDependencies:
   '@testing-library/jest-dom': 5.14.1
@@ -1876,7 +1876,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
+      tailwindcss: 2.2.7_8b238584a104f535cc123d61e89214a6
     dev: false
 
   /@testing-library/jest-dom/5.14.1:
@@ -2328,16 +2328,16 @@ packages:
     hasBin: true
     dev: true
 
-  /autoprefixer/10.3.1_postcss@8.3.6:
-    resolution: {integrity: sha512-L8AmtKzdiRyYg7BUXJTzigmhbQRCXFKz6SA1Lqo0+AR2FBbQ4aTAPFSDlOutnFkjhiz8my4agGXog1xlMjPJ6A==}
+  /autoprefixer/10.3.2_postcss@8.3.6:
+    resolution: {integrity: sha512-RHKq0YCvhxAn9987n0Gl6lkzLd39UKwCkUPMFE0cHhxU0SvcTjBxWG/CtkZ4/HvbqK9U5V8j03nAcGBlX3er/Q==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.16.6
-      caniuse-lite: 1.0.30001246
-      colorette: 1.2.2
+      browserslist: 4.16.8
+      caniuse-lite: 1.0.30001251
+      colorette: 1.3.0
       fraction.js: 4.1.1
       normalize-range: 0.1.2
       postcss: 8.3.6
@@ -2654,6 +2654,18 @@ packages:
       escalade: 3.1.1
       node-releases: 1.1.73
 
+  /browserslist/4.16.8:
+    resolution: {integrity: sha512-sc2m9ohR/49sWEbPj14ZSSZqp+kbi16aLao42Hmn3Z8FpjuMaq2xCA2l4zl9ITfyzvnvyE0hcg62YkIGKxgaNQ==}
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+    dependencies:
+      caniuse-lite: 1.0.30001251
+      colorette: 1.3.0
+      electron-to-chromium: 1.3.814
+      escalade: 3.1.1
+      node-releases: 1.1.75
+    dev: false
+
   /bser/2.1.1:
     resolution: {integrity: sha512-gQxTNE/GAfIIrmHLUE3oJyp5FO6HRBfhjnw4/wMmA63ZGDJnWBmgY/lyQBpnDUkGmAhbSe39tx2d/iTOAfglwQ==}
     dependencies:
@@ -2719,6 +2731,10 @@ packages:
 
   /caniuse-lite/1.0.30001246:
     resolution: {integrity: sha512-Tc+ff0Co/nFNbLOrziBXmMVtpt9S2c2Y+Z9Nk9Khj09J+0zR9ejvIW5qkZAErCbOrVODCx/MN+GpB5FNBs5GFA==}
+
+  /caniuse-lite/1.0.30001251:
+    resolution: {integrity: sha512-HOe1r+9VkU4TFmnU70z+r7OLmtR+/chB1rdcJUeQlAinjEeb0cKL20tlAtOagNZhbrtLnCvV19B4FmF1rgzl6A==}
+    dev: false
 
   /ccount/1.1.0:
     resolution: {integrity: sha512-vlNK021QdI7PNeiUh/lKkC/mNHHfV0m/Ad5JoI0TYtlBnJAslM/JIkm/tGC88bkLIwO6OQ5uV6ztS6kVAtCDlg==}
@@ -2920,6 +2936,10 @@ packages:
 
   /colorette/1.2.2:
     resolution: {integrity: sha512-MKGMzyfeuutC/ZJ1cba9NqcNpfeqMUcYmyF1ZFY6/Cn7CNSAKx6a+s48sqLqyAiZuaP2TcqMhoo+dlwFnVxT9w==}
+
+  /colorette/1.3.0:
+    resolution: {integrity: sha512-ecORCqbSFP7Wm8Y6lyqMJjexBQqXSF7SSeaTyGGphogUjBlFP9m9o08wy86HL2uB7fMTxtOUzLMk7ogKcxMg1w==}
+    dev: false
 
   /combined-stream/1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
@@ -3297,6 +3317,10 @@ packages:
 
   /electron-to-chromium/1.3.784:
     resolution: {integrity: sha512-JTPxdUibkefeomWNaYs8lI/x/Zb4cOhZWX+d7kpzsNKzUd07pNuo/AcHeNJ/qgEchxM1IAxda9aaGUhKN/poOg==}
+
+  /electron-to-chromium/1.3.814:
+    resolution: {integrity: sha512-0mH03cyjh6OzMlmjauGg0TLd87ErIJqWiYxMcOLKf5w6p0YEOl7DJAj7BDlXEFmCguY5CQaKVOiMjAMODO2XDw==}
+    dev: false
 
   /elliptic/6.5.4:
     resolution: {integrity: sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==}
@@ -5709,6 +5733,10 @@ packages:
   /node-releases/1.1.73:
     resolution: {integrity: sha512-uW7fodD6pyW2FZNZnp/Z3hvWKeEW1Y8R1+1CnErE8cXFXzl5blBOoVB41CvMer6P6Q0S5FXDwcHgFd1Wj0U9zg==}
 
+  /node-releases/1.1.75:
+    resolution: {integrity: sha512-Qe5OUajvqrqDSy6wrWFmMwfJ0jVgwiw4T3KqmbTcZ62qW0gQkheXYhcFM1+lOVcGUoRxcEcfyvFMAnDgaF1VWw==}
+    dev: false
+
   /normalize-package-data/2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
@@ -7135,7 +7163,7 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.7_7b69a43ec4689fa7484dee35f79a7806:
+  /tailwindcss/2.2.7_8b238584a104f535cc123d61e89214a6:
     resolution: {integrity: sha512-jv35rugP5j8PpzbXnsria7ZAry7Evh0KtQ4MZqNd+PhF+oIKPwJTVwe/rmfRx9cZw3W7iPZyzBmeoAoNwfJ1yg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -7144,7 +7172,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       arg: 5.0.0
-      autoprefixer: 10.3.1_postcss@8.3.6
+      autoprefixer: 10.3.2_postcss@8.3.6
       bytes: 3.1.0
       chalk: 4.1.1
       chokidar: 3.5.2
