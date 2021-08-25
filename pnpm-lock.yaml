@@ -13,7 +13,7 @@ specifiers:
   eslint: 7.32.0
   eslint-config-next: 11.1.0
   gray-matter: 4.0.3
-  husky: 7.0.1
+  husky: 7.0.2
   jest: 27.0.6
   lint-staged: 11.1.2
   lodash.orderby: 4.6.0
@@ -62,7 +62,7 @@ devDependencies:
   babel-jest: 27.0.6
   eslint: 7.32.0
   eslint-config-next: 11.1.0_5976364cb0ac16872ff3eea1a55e5ca2
-  husky: 7.0.1
+  husky: 7.0.2
   jest: 27.0.6
   lint-staged: 11.1.2
   prettier: 2.3.2
@@ -4245,8 +4245,8 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /husky/7.0.1:
-    resolution: {integrity: sha512-gceRaITVZ+cJH9sNHqx5tFwbzlLCVxtVZcusME8JYQ8Edy5mpGDOqD8QBCdMhpyo9a+JXddnujQ4rpY2Ff9SJA==}
+  /husky/7.0.2:
+    resolution: {integrity: sha512-8yKEWNX4z2YsofXAMT7KvA1g8p+GxtB1ffV8XtpAEGuXNAbCV5wdNKH+qTpw8SM9fh4aMPDR+yQuKfgnreyZlg==}
     engines: {node: '>=12'}
     hasBin: true
     dev: true
