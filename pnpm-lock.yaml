@@ -8,7 +8,7 @@ specifiers:
   '@types/jest': 27.0.1
   '@types/node': 15.3.0
   '@types/react': 17.0.19
-  autoprefixer: 10.3.2
+  autoprefixer: 10.3.3
   babel-jest: 27.0.6
   eslint: 7.32.0
   eslint-config-next: 11.1.0
@@ -37,7 +37,7 @@ dependencies:
   '@mdx-js/react': 1.6.22_react@17.0.2
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.7
   '@types/gtag.js': 0.0.7
-  autoprefixer: 10.3.2_postcss@8.3.6
+  autoprefixer: 10.3.3_postcss@8.3.6
   gray-matter: 4.0.3
   lodash.orderby: 4.6.0
   mdx-prism: 0.3.4
@@ -52,7 +52,7 @@ dependencies:
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
   remark-slug: 6.1.0
-  tailwindcss: 2.2.7_8b238584a104f535cc123d61e89214a6
+  tailwindcss: 2.2.7_3ae63246f7b6ebdbe8521b4b745e51c3
 
 devDependencies:
   '@testing-library/jest-dom': 5.14.1
@@ -1876,7 +1876,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.7_8b238584a104f535cc123d61e89214a6
+      tailwindcss: 2.2.7_3ae63246f7b6ebdbe8521b4b745e51c3
     dev: false
 
   /@testing-library/jest-dom/5.14.1:
@@ -2328,15 +2328,15 @@ packages:
     hasBin: true
     dev: true
 
-  /autoprefixer/10.3.2_postcss@8.3.6:
-    resolution: {integrity: sha512-RHKq0YCvhxAn9987n0Gl6lkzLd39UKwCkUPMFE0cHhxU0SvcTjBxWG/CtkZ4/HvbqK9U5V8j03nAcGBlX3er/Q==}
+  /autoprefixer/10.3.3_postcss@8.3.6:
+    resolution: {integrity: sha512-yRzjxfnggrP/+qVHlUuZz5FZzEbkT+Yt0/Df6ScEMnbbZBLzYB2W0KLxoQCW+THm1SpOsM1ZPcTHAwuvmibIsQ==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.16.8
-      caniuse-lite: 1.0.30001251
+      caniuse-lite: 1.0.30001252
       colorette: 1.3.0
       fraction.js: 4.1.1
       normalize-range: 0.1.2
@@ -2659,7 +2659,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001251
+      caniuse-lite: 1.0.30001252
       colorette: 1.3.0
       electron-to-chromium: 1.3.814
       escalade: 3.1.1
@@ -2732,8 +2732,8 @@ packages:
   /caniuse-lite/1.0.30001246:
     resolution: {integrity: sha512-Tc+ff0Co/nFNbLOrziBXmMVtpt9S2c2Y+Z9Nk9Khj09J+0zR9ejvIW5qkZAErCbOrVODCx/MN+GpB5FNBs5GFA==}
 
-  /caniuse-lite/1.0.30001251:
-    resolution: {integrity: sha512-HOe1r+9VkU4TFmnU70z+r7OLmtR+/chB1rdcJUeQlAinjEeb0cKL20tlAtOagNZhbrtLnCvV19B4FmF1rgzl6A==}
+  /caniuse-lite/1.0.30001252:
+    resolution: {integrity: sha512-I56jhWDGMtdILQORdusxBOH+Nl/KgQSdDmpJezYddnAkVOmnoU8zwjTV9xAjMIYxr0iPreEAVylCGcmHCjfaOw==}
     dev: false
 
   /ccount/1.1.0:
@@ -7163,7 +7163,7 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.7_8b238584a104f535cc123d61e89214a6:
+  /tailwindcss/2.2.7_3ae63246f7b6ebdbe8521b4b745e51c3:
     resolution: {integrity: sha512-jv35rugP5j8PpzbXnsria7ZAry7Evh0KtQ4MZqNd+PhF+oIKPwJTVwe/rmfRx9cZw3W7iPZyzBmeoAoNwfJ1yg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -7172,7 +7172,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       arg: 5.0.0
-      autoprefixer: 10.3.2_postcss@8.3.6
+      autoprefixer: 10.3.3_postcss@8.3.6
       bytes: 3.1.0
       chalk: 4.1.1
       chokidar: 3.5.2
