@@ -30,12 +30,12 @@ specifiers:
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
   remark-slug: 6.1.0
-  tailwindcss: 2.2.7
+  tailwindcss: 2.2.8
   typescript: 4.4.2
 
 dependencies:
   '@mdx-js/react': 1.6.22_react@17.0.2
-  '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.7
+  '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.8
   '@types/gtag.js': 0.0.7
   autoprefixer: 10.3.3_postcss@8.3.6
   gray-matter: 4.0.3
@@ -52,7 +52,7 @@ dependencies:
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
   remark-slug: 6.1.0
-  tailwindcss: 2.2.7_3ae63246f7b6ebdbe8521b4b745e51c3
+  tailwindcss: 2.2.8_3ae63246f7b6ebdbe8521b4b745e51c3
 
 devDependencies:
   '@testing-library/jest-dom': 5.14.1
@@ -1867,7 +1867,7 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.7:
+  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.8:
     resolution: {integrity: sha512-ovPPLUhs7zAIJfr0y1dbGlyCuPhpuv/jpBoFgqAc658DWGGrOBWBMpAWLw2KlzbNeVk4YBJMzue1ekvIbdw6XA==}
     peerDependencies:
       tailwindcss: '>=2.0.0'
@@ -1876,7 +1876,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.7_3ae63246f7b6ebdbe8521b4b745e51c3
+      tailwindcss: 2.2.8_3ae63246f7b6ebdbe8521b4b745e51c3
     dev: false
 
   /@testing-library/jest-dom/5.14.1:
@@ -2227,8 +2227,8 @@ packages:
       normalize-path: 3.0.0
       picomatch: 2.3.0
 
-  /arg/5.0.0:
-    resolution: {integrity: sha512-4P8Zm2H+BRS+c/xX1LrHw0qKpEhdlZjLCgWy+d78T9vqa2Z2SiD2wMrYuWIAFy5IZUD7nnNXroRttz+0RzlrzQ==}
+  /arg/5.0.1:
+    resolution: {integrity: sha512-e0hDa9H2Z9AwFkk2qDlwhoMYE4eToKarchkQHovNdLTCYMHZHeRjI71crOh+dio4K6u1IcwubQqo79Ga4CyAQA==}
     dev: false
 
   /argparse/1.0.10:
@@ -2774,6 +2774,15 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+    dev: true
+
+  /chalk/4.1.2:
+    resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
+    engines: {node: '>=10'}
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
+    dev: false
 
   /char-regex/1.0.2:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}
@@ -2927,10 +2936,10 @@ packages:
       simple-swizzle: 0.2.2
     dev: false
 
-  /color/3.2.1:
-    resolution: {integrity: sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA==}
+  /color/4.0.1:
+    resolution: {integrity: sha512-rpZjOKN5O7naJxkH2Rx1sZzzBgaiWECc6BYXjeCE6kF0kcASJYbUq02u7JqIHwCb/j3NhV+QhRL2683aICeGZA==}
     dependencies:
-      color-convert: 1.9.3
+      color-convert: 2.0.1
       color-string: 1.6.0
     dev: false
 
@@ -5359,10 +5368,6 @@ packages:
     resolution: {integrity: sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=}
     dev: false
 
-  /lodash.toarray/4.4.0:
-    resolution: {integrity: sha1-JMS/zWsvuji/0FlNsRedjptlZWE=}
-    dev: false
-
   /lodash.topath/4.5.2:
     resolution: {integrity: sha1-NhY1Hzu6YZlKCTGYlmC9AyVP0Ak=}
     dev: false
@@ -5676,10 +5681,10 @@ packages:
       - webpack
     dev: false
 
-  /node-emoji/1.10.0:
-    resolution: {integrity: sha512-Yt3384If5H6BYGVHiHwTL+99OzJKHhgp82S8/dktEK73T26BazdgZ4JZh92xSVtGNJvz9UbXdNAc5hcrXV42vw==}
+  /node-emoji/1.11.0:
+    resolution: {integrity: sha512-wo2DpQkQp7Sjm2A0cq+sN7EHKO6Sl0ctXeBdFZrL9T9+UywORbufTcTZxom8YqpLQt/FqNMUkOpkZrJVYSKD3A==}
     dependencies:
-      lodash.toarray: 4.4.0
+      lodash: 4.17.21
     dev: false
 
   /node-fetch/2.6.1:
@@ -6104,11 +6109,11 @@ packages:
       yaml: 1.10.2
     dev: false
 
-  /postcss-nested/5.0.5_postcss@8.3.6:
-    resolution: {integrity: sha512-GSRXYz5bccobpTzLQZXOnSOfKl6TwVr5CyAQJUPub4nuRJSOECK5AqurxVgmtxP48p0Kc/ndY/YyS1yqldX0Ew==}
-    engines: {node: '>=10.0'}
+  /postcss-nested/5.0.6_postcss@8.3.6:
+    resolution: {integrity: sha512-rKqm2Fk0KbA8Vt3AdGN0FB9OBOMDVajMG6ZCf/GoHgdxUJ4sBFp0A/uMIRm+MJUdo33YXEtjqIz8u7DAp8B7DA==}
+    engines: {node: '>=12.0'}
     peerDependencies:
-      postcss: ^8.1.13
+      postcss: ^8.2.14
     dependencies:
       postcss: 8.3.6
       postcss-selector-parser: 6.0.6
@@ -7163,20 +7168,20 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.7_3ae63246f7b6ebdbe8521b4b745e51c3:
-    resolution: {integrity: sha512-jv35rugP5j8PpzbXnsria7ZAry7Evh0KtQ4MZqNd+PhF+oIKPwJTVwe/rmfRx9cZw3W7iPZyzBmeoAoNwfJ1yg==}
+  /tailwindcss/2.2.8_3ae63246f7b6ebdbe8521b4b745e51c3:
+    resolution: {integrity: sha512-sq6pKVIjklgtuj7OKn+6KD6UqNebYKZYUSx0oKx8aS1usdUXn1TLuwFyr/85HNYu5uHNduLFsXrtQJtkNmYlqQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.0.9
     dependencies:
-      arg: 5.0.0
+      arg: 5.0.1
       autoprefixer: 10.3.3_postcss@8.3.6
       bytes: 3.1.0
-      chalk: 4.1.1
+      chalk: 4.1.2
       chokidar: 3.5.2
-      color: 3.2.1
+      color: 4.0.1
       cosmiconfig: 7.0.0
       detective: 5.2.0
       didyoumean: 1.2.2
@@ -7189,13 +7194,13 @@ packages:
       lodash: 4.17.21
       lodash.topath: 4.5.2
       modern-normalize: 1.1.0
-      node-emoji: 1.10.0
+      node-emoji: 1.11.0
       normalize-path: 3.0.0
       object-hash: 2.2.0
       postcss: 8.3.6
       postcss-js: 3.0.3
       postcss-load-config: 3.1.0
-      postcss-nested: 5.0.5_postcss@8.3.6
+      postcss-nested: 5.0.6_postcss@8.3.6
       postcss-selector-parser: 6.0.6
       postcss-value-parser: 4.1.0
       pretty-hrtime: 1.0.3
