@@ -8,7 +8,7 @@ specifiers:
   '@types/jest': 27.0.1
   '@types/node': 15.3.0
   '@types/react': 17.0.19
-  autoprefixer: 10.3.3
+  autoprefixer: 10.3.4
   babel-jest: 27.1.0
   eslint: 7.32.0
   eslint-config-next: 11.1.2
@@ -37,7 +37,7 @@ dependencies:
   '@mdx-js/react': 1.6.22_react@17.0.2
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.9
   '@types/gtag.js': 0.0.7
-  autoprefixer: 10.3.3_postcss@8.3.6
+  autoprefixer: 10.3.4_postcss@8.3.6
   gray-matter: 4.0.3
   lodash.orderby: 4.6.0
   mdx-prism: 0.3.4
@@ -52,7 +52,7 @@ dependencies:
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
   remark-slug: 6.1.0
-  tailwindcss: 2.2.9_3ae63246f7b6ebdbe8521b4b745e51c3
+  tailwindcss: 2.2.9_4dc2d3db2b138fb8fa7d5c7b0c803aba
 
 devDependencies:
   '@testing-library/jest-dom': 5.14.1
@@ -1921,7 +1921,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.9_3ae63246f7b6ebdbe8521b4b745e51c3
+      tailwindcss: 2.2.9_4dc2d3db2b138fb8fa7d5c7b0c803aba
     dev: false
 
   /@testing-library/jest-dom/5.14.1:
@@ -2373,8 +2373,8 @@ packages:
     hasBin: true
     dev: true
 
-  /autoprefixer/10.3.3_postcss@8.3.6:
-    resolution: {integrity: sha512-yRzjxfnggrP/+qVHlUuZz5FZzEbkT+Yt0/Df6ScEMnbbZBLzYB2W0KLxoQCW+THm1SpOsM1ZPcTHAwuvmibIsQ==}
+  /autoprefixer/10.3.4_postcss@8.3.6:
+    resolution: {integrity: sha512-EKjKDXOq7ug+jagLzmnoTRpTT0q1KVzEJqrJd0hCBa7FiG0WbFOBCcJCy2QkW1OckpO3qgttA1aWjVbeIPAecw==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
@@ -7241,7 +7241,7 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.9_3ae63246f7b6ebdbe8521b4b745e51c3:
+  /tailwindcss/2.2.9_4dc2d3db2b138fb8fa7d5c7b0c803aba:
     resolution: {integrity: sha512-P8zCKFkEthfUvqcnun8DqGGXw4QqyDw971NAM23e8QQ+m5HW1agp4upq50rFGwGNtphVYvr+0zvVLSXo5/I9Qg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -7250,7 +7250,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       arg: 5.0.1
-      autoprefixer: 10.3.3_postcss@8.3.6
+      autoprefixer: 10.3.4_postcss@8.3.6
       bytes: 3.1.0
       chalk: 4.1.2
       chokidar: 3.5.2
