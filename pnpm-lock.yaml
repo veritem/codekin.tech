@@ -7,7 +7,7 @@ specifiers:
   '@types/gtag.js': 0.0.7
   '@types/jest': 27.0.1
   '@types/node': 15.3.0
-  '@types/react': 17.0.19
+  '@types/react': 17.0.20
   autoprefixer: 10.3.4
   babel-jest: 27.1.0
   eslint: 7.32.0
@@ -58,7 +58,7 @@ devDependencies:
   '@testing-library/jest-dom': 5.14.1
   '@types/jest': 27.0.1
   '@types/node': 15.3.0
-  '@types/react': 17.0.19
+  '@types/react': 17.0.20
   babel-jest: 27.1.0
   eslint: 7.32.0
   eslint-config-next: 11.1.2_1a4cc63bb962be0c1c6a016cd2486bf8
@@ -2047,8 +2047,8 @@ packages:
     resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==}
     dev: true
 
-  /@types/react/17.0.19:
-    resolution: {integrity: sha512-sX1HisdB1/ZESixMTGnMxH9TDe8Sk709734fEQZzCV/4lSu9kJCPbo2PbTRoZM+53Pp0P10hYVyReUueGwUi4A==}
+  /@types/react/17.0.20:
+    resolution: {integrity: sha512-wWZrPlihslrPpcKyCSlmIlruakxr57/buQN1RjlIeaaTWDLtJkTtRW429MoQJergvVKc4IWBpRhWw7YNh/7GVA==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
