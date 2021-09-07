@@ -30,12 +30,12 @@ specifiers:
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
   remark-slug: 6.1.0
-  tailwindcss: 2.2.10
+  tailwindcss: 2.2.11
   typescript: 4.4.2
 
 dependencies:
   '@mdx-js/react': 1.6.22_react@17.0.2
-  '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.10
+  '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.11
   '@types/gtag.js': 0.0.7
   autoprefixer: 10.3.4_postcss@8.3.6
   gray-matter: 4.0.3
@@ -52,7 +52,7 @@ dependencies:
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
   remark-slug: 6.1.0
-  tailwindcss: 2.2.10_4dc2d3db2b138fb8fa7d5c7b0c803aba
+  tailwindcss: 2.2.11_4dc2d3db2b138fb8fa7d5c7b0c803aba
 
 devDependencies:
   '@testing-library/jest-dom': 5.14.1
@@ -1912,7 +1912,7 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.10:
+  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.11:
     resolution: {integrity: sha512-ovPPLUhs7zAIJfr0y1dbGlyCuPhpuv/jpBoFgqAc658DWGGrOBWBMpAWLw2KlzbNeVk4YBJMzue1ekvIbdw6XA==}
     peerDependencies:
       tailwindcss: '>=2.0.0'
@@ -1921,7 +1921,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.10_4dc2d3db2b138fb8fa7d5c7b0c803aba
+      tailwindcss: 2.2.11_4dc2d3db2b138fb8fa7d5c7b0c803aba
     dev: false
 
   /@testing-library/jest-dom/5.14.1:
@@ -3131,6 +3131,10 @@ packages:
       randomfill: 1.0.4
     dev: false
 
+  /css-color-names/0.0.4:
+    resolution: {integrity: sha1-gIrcLnnPhHOAabZGyyDsJ762KeA=}
+    dev: false
+
   /css-unit-converter/1.1.2:
     resolution: {integrity: sha512-IiJwMC8rdZE0+xiEZHeru6YoONC4rfPMqGm2W85jMIbkFvv5nFTwJVFHam2eFrN6txmoUYFAFXiv8ICVeTO0MA==}
     dev: false
@@ -4224,6 +4228,10 @@ packages:
     hasBin: true
     dev: false
 
+  /hex-color-regex/1.1.0:
+    resolution: {integrity: sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==}
+    dev: false
+
   /hmac-drbg/1.0.1:
     resolution: {integrity: sha1-0nRXAQJabHdabFRXk+1QL8DGSaE=}
     dependencies:
@@ -4235,6 +4243,14 @@ packages:
   /hosted-git-info/2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
     dev: true
+
+  /hsl-regex/1.0.0:
+    resolution: {integrity: sha1-1JMwx4ntgZ4nakwNJy3/owsY/m4=}
+    dev: false
+
+  /hsla-regex/1.0.0:
+    resolution: {integrity: sha1-wc56MWjIxmFAM6S194d/OyJfnDg=}
+    dev: false
 
   /html-encoding-sniffer/2.0.1:
     resolution: {integrity: sha512-D5JbOMBIR/TVZkubHT+OyT2705QvogUW4IBn6nHd756OwieSF9aDYFj4dv6HHEVGYbHaLETa3WggZYWWMyy3ZQ==}
@@ -4468,6 +4484,17 @@ packages:
     dependencies:
       ci-info: 3.2.0
     dev: true
+
+  /is-color-stop/1.1.0:
+    resolution: {integrity: sha1-z/9HGu5N1cnhWFmPvhKWe1za00U=}
+    dependencies:
+      css-color-names: 0.0.4
+      hex-color-regex: 1.1.0
+      hsl-regex: 1.0.0
+      hsla-regex: 1.0.0
+      rgb-regex: 1.0.1
+      rgba-regex: 1.0.0
+    dev: false
 
   /is-core-module/2.5.0:
     resolution: {integrity: sha512-TXCMSDsEHMEEZ6eCA8rwRDbLu55MRGmrctljsBX/2v1d9/GzqHOxW5c5oPSgrUt2vBFXebu9rGqckXGPWOlYpg==}
@@ -6738,6 +6765,14 @@ packages:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
+  /rgb-regex/1.0.1:
+    resolution: {integrity: sha1-wODWiC3w4jviVKR16O3UGRX+rrE=}
+    dev: false
+
+  /rgba-regex/1.0.0:
+    resolution: {integrity: sha1-QzdOLiyglosO8VI0YLfXMP8i7rM=}
+    dev: false
+
   /rimraf/3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
     hasBin: true
@@ -7241,8 +7276,8 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.10_4dc2d3db2b138fb8fa7d5c7b0c803aba:
-    resolution: {integrity: sha512-OFm08RRy7elXhv57DRLzCVKrylIbnu6htJzcD/bGPOdokLQrqywSTYPs3SSqsxqXF+6Mzy/XJcS89gZDIF057A==}
+  /tailwindcss/2.2.11_4dc2d3db2b138fb8fa7d5c7b0c803aba:
+    resolution: {integrity: sha512-nXHuyB94Q5n3eSy41qdNEORDb2R6Vtq0LZmFfVfpYJxTWEZJ50IzaOkq2tCN8KJTNsQ5kZHhy+rj2aX6lJyGbQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
@@ -7263,6 +7298,7 @@ packages:
       fs-extra: 10.0.0
       glob-parent: 6.0.1
       html-tags: 3.1.0
+      is-color-stop: 1.1.0
       is-glob: 4.0.1
       lodash: 4.17.21
       lodash.topath: 4.5.2
