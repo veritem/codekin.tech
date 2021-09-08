@@ -30,12 +30,12 @@ specifiers:
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
   remark-slug: 6.1.0
-  tailwindcss: 2.2.12
+  tailwindcss: 2.2.14
   typescript: 4.4.2
 
 dependencies:
   '@mdx-js/react': 1.6.22_react@17.0.2
-  '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.12
+  '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.14
   '@types/gtag.js': 0.0.7
   autoprefixer: 10.3.4_postcss@8.3.6
   gray-matter: 4.0.3
@@ -52,7 +52,7 @@ dependencies:
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
   remark-slug: 6.1.0
-  tailwindcss: 2.2.12_4dc2d3db2b138fb8fa7d5c7b0c803aba
+  tailwindcss: 2.2.14_4dc2d3db2b138fb8fa7d5c7b0c803aba
 
 devDependencies:
   '@testing-library/jest-dom': 5.14.1
@@ -1914,7 +1914,7 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.12:
+  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.14:
     resolution: {integrity: sha512-ovPPLUhs7zAIJfr0y1dbGlyCuPhpuv/jpBoFgqAc658DWGGrOBWBMpAWLw2KlzbNeVk4YBJMzue1ekvIbdw6XA==}
     peerDependencies:
       tailwindcss: '>=2.0.0'
@@ -1923,7 +1923,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.12_4dc2d3db2b138fb8fa7d5c7b0c803aba
+      tailwindcss: 2.2.14_4dc2d3db2b138fb8fa7d5c7b0c803aba
     dev: false
 
   /@testing-library/jest-dom/5.14.1:
@@ -7278,8 +7278,8 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.12_4dc2d3db2b138fb8fa7d5c7b0c803aba:
-    resolution: {integrity: sha512-xB21XYyad1ZBATFHfSqe8hDHK7G+QLgErEy754h5gG+BcvrBoCBknaXGCDq9CXj9Azqz4zby3adCyY88kYRg0g==}
+  /tailwindcss/2.2.14_4dc2d3db2b138fb8fa7d5c7b0c803aba:
+    resolution: {integrity: sha512-gQQPKbV8qb8GthGhJGbRR+lKluSpFq+L78CJZLmqumEBKPMDkD+l5wFlOTzlOhWozG4S1I9AUSaPkD1EfnNsug==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
