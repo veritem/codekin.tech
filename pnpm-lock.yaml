@@ -25,7 +25,7 @@ specifiers:
   prettier: 2.4.0
   react: 17.0.2
   react-dom: 17.0.2
-  reading-time: 1.4.0
+  reading-time: 1.5.0
   rehype: 12.0.0
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
@@ -47,7 +47,7 @@ dependencies:
   postcss: 8.3.6
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  reading-time: 1.4.0
+  reading-time: 1.5.0
   rehype: 12.0.0
   remark-autolink-headings: 6.1.0
   remark-code-titles: 0.1.2
@@ -6513,8 +6513,8 @@ packages:
       picomatch: 2.3.0
     dev: false
 
-  /reading-time/1.4.0:
-    resolution: {integrity: sha512-0I9aP583rqQhm6T6Y+pYgYaM4w649VHgQPC24xSWXpn/4qRs08Zu6KgXRf0da6/k7IHoC6idm76fU6vz4mmzHQ==}
+  /reading-time/1.5.0:
+    resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
     dev: false
 
   /redent/3.0.0:
