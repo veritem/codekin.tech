@@ -1,4 +1,8 @@
-# codekin
+## ☠️ archived
+
+checkout my latest work here https://veritem.me
+
+## codekin
 
 [![CI](https://github.com/makuzaverite/codekin.tech/actions/workflows/ci.yml/badge.svg)](https://github.com/makuzaverite/codekin.tech/actions/workflows/ci.yml)
 [![Tests](https://github.com/makuzaverite/codekin.tech/actions/workflows/test.yml/badge.svg)](https://github.com/makuzaverite/codekin.tech/actions/workflows/test.yml)
